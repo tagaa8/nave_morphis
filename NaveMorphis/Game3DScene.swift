@@ -248,9 +248,11 @@ class Game3DScene: SCNScene {
         
         // Main hull (Defiant-style)
         let hullGeometry = SCNBox(width: 3, height: 0.8, length: 6, chamferRadius: 0.1)
-        hullGeometry.firstMaterial?.diffuse.contents = UIColor.blue
-        hullGeometry.firstMaterial?.metalness.contents = 0.8
-        hullGeometry.firstMaterial?.roughness.contents = 0.3
+        hullGeometry.firstMaterial?.lightingModel = .physicallyBased
+        hullGeometry.firstMaterial?.diffuse.contents = UIColor(red: 0.3, green: 0.5, blue: 0.8, alpha: 1.0)
+        hullGeometry.firstMaterial?.metalness.contents = 0.6
+        hullGeometry.firstMaterial?.roughness.contents = 0.4
+        hullGeometry.firstMaterial?.specular.contents = UIColor.white
         let hull = SCNNode(geometry: hullGeometry)
         shipNode.addChildNode(hull)
         
@@ -337,12 +339,14 @@ class Game3DScene: SCNScene {
                 playerShip.position.z + scaledMovement.z
             )
             
-            // Add banking rotation when turning
-            let bankAngle = movement.x * 0.3
-            playerShip.eulerAngles = SCNVector3(0, 0, -bankAngle)
+            // Rotate ship to face movement direction
+            if movement.x != 0 || movement.z != 0 {
+                let targetRotationY = atan2(movement.x, -movement.z)
+                playerShip.eulerAngles = SCNVector3(0, targetRotationY, -movement.x * 0.3)
+            }
         } else {
-            // Return to level when not turning
-            playerShip.eulerAngles = SCNVector3(0, 0, 0)
+            // Return to level when not moving
+            playerShip.eulerAngles = SCNVector3(0, playerShip.eulerAngles.y, 0)
         }
         
         // Keep player in bounds
@@ -406,13 +410,17 @@ class Game3DScene: SCNScene {
     
     private func updateBullets(deltaTime: TimeInterval) {
         bullets.removeAll { bullet in
-            // Move bullets forward
+            // Move bullets forward in the direction they were fired
             let speed: Float = bullet.name?.contains("enemy") == true ? 30 : 50
-            let _ = bullet.worldTransform.m31 // Forward direction (unused)
+            
+            // Get the bullet's forward direction from its transform
+            let transform = bullet.transform
+            let forward = SCNVector3(-transform.m31, -transform.m32, -transform.m33)
+            
             bullet.position = SCNVector3(
-                bullet.position.x,
-                bullet.position.y,
-                bullet.position.z - speed * Float(deltaTime)
+                bullet.position.x + forward.x * speed * Float(deltaTime),
+                bullet.position.y + forward.y * speed * Float(deltaTime),
+                bullet.position.z + forward.z * speed * Float(deltaTime)
             )
             
             // Remove if too far

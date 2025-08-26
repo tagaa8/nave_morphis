@@ -42,9 +42,9 @@ class Game3DViewController: UIViewController {
         sceneView.backgroundColor = UIColor.black
         
         // SceneKit settings for better performance and quality
-        sceneView.antialiasingMode = .none // Disable for better performance
+        sceneView.antialiasingMode = .multisampling2X // Balanced quality
         sceneView.preferredFramesPerSecond = 60
-        sceneView.allowsCameraControl = false
+        sceneView.allowsCameraControl = true // Allow camera rotation
         sceneView.showsStatistics = false
         
         // Performance optimizations
@@ -237,10 +237,10 @@ protocol VirtualJoystick3DDelegate: AnyObject {
 
 extension Game3DViewController: VirtualJoystick3DDelegate {
     func joystickMoved(x: Float, z: Float) {
-        // Convert joystick input to game movement
+        // Convert joystick input to game movement (fixed directions)
         gameScene.handleInput(keyCode: 0, isPressed: x < -0.3) // A key (left)
         gameScene.handleInput(keyCode: 2, isPressed: x > 0.3)  // D key (right)
-        gameScene.handleInput(keyCode: 13, isPressed: z < -0.3) // W key (forward)
-        gameScene.handleInput(keyCode: 1, isPressed: z > 0.3)  // S key (backward)
+        gameScene.handleInput(keyCode: 13, isPressed: z > 0.3) // W key (forward) - FIXED
+        gameScene.handleInput(keyCode: 1, isPressed: z < -0.3)  // S key (backward) - FIXED
     }
 }

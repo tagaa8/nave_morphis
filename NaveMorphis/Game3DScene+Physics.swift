@@ -121,15 +121,18 @@ extension Game3DScene: SCNPhysicsContactDelegate {
     
     private func createExplosion(at position: SCNVector3, color: UIColor, size: Float) {
         let explosion = SCNParticleSystem()
-        explosion.particleLifeSpan = 2.0
-        explosion.birthRate = 300
+        explosion.particleLifeSpan = 1.5
+        explosion.birthRate = 150  // Reduced for better performance
         explosion.particleColor = color
-        explosion.particleSize = CGFloat(size)
-        explosion.particleSizeVariation = CGFloat(size * 0.5)
-        explosion.particleVelocity = 20
-        explosion.particleVelocityVariation = 15
-        explosion.spreadingAngle = 180
-        explosion.emissionDuration = 0.2
+        explosion.particleSize = CGFloat(size * 0.8)  // Smaller particles
+        explosion.particleSizeVariation = CGFloat(size * 0.3)
+        explosion.particleVelocity = 15
+        explosion.particleVelocityVariation = 10
+        explosion.spreadingAngle = 120  // More focused explosion
+        explosion.emissionDuration = 0.15
+        
+        // Add blending mode for better visual quality
+        explosion.blendMode = .additive
         
         // Create temporary node for explosion
         let explosionNode = SCNNode()
