@@ -117,8 +117,8 @@ extension Game3DScene: SCNPhysicsContactDelegate {
         explosion.particleLifeSpan = 2.0
         explosion.birthRate = 300
         explosion.particleColor = color
-        explosion.particleSize = size
-        explosion.particleSizeVariation = size * 0.5
+        explosion.particleSize = CGFloat(size)
+        explosion.particleSizeVariation = CGFloat(size * 0.5)
         explosion.particleVelocity = 20
         explosion.particleVelocityVariation = 15
         explosion.spreadingAngle = 180

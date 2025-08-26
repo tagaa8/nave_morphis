@@ -5,22 +5,22 @@ import GameplayKit
 class Game3DScene: SCNScene {
     
     // MARK: - Game Properties
-    private var score = 0
-    private var lives = 3
-    private var wave = 1
-    private var gameState: GameState = .playing
+    internal var score = 0
+    internal var lives = 3
+    internal var wave = 1
+    internal var gameState: GameState = .playing
     
     // MARK: - 3D Nodes
-    private var cameraNode: SCNNode!
-    private var lightNode: SCNNode!
-    private var playerShip: SCNNode!
-    private var spaceStation: SCNNode!
-    private var enemyShips: [SCNNode] = []
-    private var bullets: [SCNNode] = []
+    internal var cameraNode: SCNNode!
+    internal var lightNode: SCNNode!
+    internal var playerShip: SCNNode!
+    internal var spaceStation: SCNNode!
+    internal var enemyShips: [SCNNode] = []
+    internal var bullets: [SCNNode] = []
     
     // MARK: - Game Controller
-    private weak var sceneView: SCNView?
-    private var lastUpdateTime: TimeInterval = 0
+    internal weak var sceneView: SCNView?
+    internal var lastUpdateTime: TimeInterval = 0
     
     // MARK: - Input
     private var isMovingForward = false
