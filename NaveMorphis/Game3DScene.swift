@@ -32,8 +32,8 @@ class Game3DScene: SCNScene {
     private var isFiring = false
     
     // MARK: - Collision Cooldown
-    private var lastCollisionTime: TimeInterval = 0
-    private let collisionCooldown: TimeInterval = 1.0
+    internal var lastCollisionTime: TimeInterval = 0
+    internal let collisionCooldown: TimeInterval = 1.0
     
     // MARK: - Physics Categories
     struct PhysicsCategory {
