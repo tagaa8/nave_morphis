@@ -15,8 +15,8 @@ class GameViewController: UIViewController {
         // Configurar orientación
         setupOrientation()
         
-        // Cargar la escena del menú principal
-        let scene = MainMenuScene(size: skView.bounds.size)
+        // Cargar la escena del menú principal 3D
+        let scene = MainMenuScene3D(size: skView.bounds.size)
         scene.scaleMode = .aspectFill
         
         skView.presentScene(scene)

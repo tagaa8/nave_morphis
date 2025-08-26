@@ -17,6 +17,13 @@
 		1A1A1A211234567812345678 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1F1234567812345678 /* LaunchScreen.storyboard */; };
 		1A1A1A291234567812345678 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A281234567812345678 /* MainMenuScene.swift */; };
 		1A1A1A2B1234567812345678 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A2A1234567812345678 /* GameOverScene.swift */; };
+		1A1A1A331234567812345678 /* GameScene3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A2C1234567812345678 /* GameScene3D.swift */; };
+		1A1A1A341234567812345678 /* PlayerShip3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A2D1234567812345678 /* PlayerShip3D.swift */; };
+		1A1A1A351234567812345678 /* EnemyShip3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A2E1234567812345678 /* EnemyShip3D.swift */; };
+		1A1A1A361234567812345678 /* MothershipBoss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A2F1234567812345678 /* MothershipBoss.swift */; };
+		1A1A1A371234567812345678 /* VisualEffects3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A301234567812345678 /* VisualEffects3D.swift */; };
+		1A1A1A381234567812345678 /* MainMenuScene3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A311234567812345678 /* MainMenuScene3D.swift */; };
+		1A1A1A391234567812345678 /* GameOverScene3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A321234567812345678 /* GameOverScene3D.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +39,13 @@
 		1A1A1A221234567812345678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A1A1A281234567812345678 /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
 		1A1A1A2A1234567812345678 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		1A1A1A2C1234567812345678 /* GameScene3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene3D.swift; sourceTree = "<group>"; };
+		1A1A1A2D1234567812345678 /* PlayerShip3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerShip3D.swift; sourceTree = "<group>"; };
+		1A1A1A2E1234567812345678 /* EnemyShip3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyShip3D.swift; sourceTree = "<group>"; };
+		1A1A1A2F1234567812345678 /* MothershipBoss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MothershipBoss.swift; sourceTree = "<group>"; };
+		1A1A1A301234567812345678 /* VisualEffects3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffects3D.swift; sourceTree = "<group>"; };
+		1A1A1A311234567812345678 /* MainMenuScene3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene3D.swift; sourceTree = "<group>"; };
+		1A1A1A321234567812345678 /* GameOverScene3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene3D.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +84,13 @@
 				1A1A1A161234567812345678 /* GameScene.swift */,
 				1A1A1A281234567812345678 /* MainMenuScene.swift */,
 				1A1A1A2A1234567812345678 /* GameOverScene.swift */,
+				1A1A1A2C1234567812345678 /* GameScene3D.swift */,
+				1A1A1A2D1234567812345678 /* PlayerShip3D.swift */,
+				1A1A1A2E1234567812345678 /* EnemyShip3D.swift */,
+				1A1A1A2F1234567812345678 /* MothershipBoss.swift */,
+				1A1A1A301234567812345678 /* VisualEffects3D.swift */,
+				1A1A1A311234567812345678 /* MainMenuScene3D.swift */,
+				1A1A1A321234567812345678 /* GameOverScene3D.swift */,
 				1A1A1A181234567812345678 /* GameViewController.swift */,
 				1A1A1A1A1234567812345678 /* Main.storyboard */,
 				1A1A1A1D1234567812345678 /* Assets.xcassets */,
@@ -156,6 +177,13 @@
 				1A1A1A191234567812345678 /* GameViewController.swift in Sources */,
 				1A1A1A291234567812345678 /* MainMenuScene.swift in Sources */,
 				1A1A1A2B1234567812345678 /* GameOverScene.swift in Sources */,
+				1A1A1A331234567812345678 /* GameScene3D.swift in Sources */,
+				1A1A1A341234567812345678 /* PlayerShip3D.swift in Sources */,
+				1A1A1A351234567812345678 /* EnemyShip3D.swift in Sources */,
+				1A1A1A361234567812345678 /* MothershipBoss.swift in Sources */,
+				1A1A1A371234567812345678 /* VisualEffects3D.swift in Sources */,
+				1A1A1A381234567812345678 /* MainMenuScene3D.swift in Sources */,
+				1A1A1A391234567812345678 /* GameOverScene3D.swift in Sources */,
 				1A1A1A111234567812345678 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
