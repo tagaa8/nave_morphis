@@ -49,7 +49,6 @@ class Game3DViewController: UIViewController {
         
         // Performance optimizations
         sceneView.rendersContinuously = true
-        sceneView.jitteringEnabled = false
         
         // Debug options (disable in production)
         #if DEBUG
