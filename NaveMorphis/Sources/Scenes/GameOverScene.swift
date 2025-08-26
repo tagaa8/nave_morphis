@@ -2,7 +2,6 @@ import SpriteKit
 
 class GameOverScene: SKScene {
     
-    private var won: Bool
     private var finalScore: Int
     private var wave: Int
     
@@ -13,8 +12,7 @@ class GameOverScene: SKScene {
     private var playAgainButton: SKLabelNode?
     private var mainMenuButton: SKLabelNode?
     
-    init(size: CGSize, won: Bool, finalScore: Int, wave: Int) {
-        self.won = won
+    init(size: CGSize, finalScore: Int, wave: Int) {
         self.finalScore = finalScore
         self.wave = wave
         super.init(size: size)
@@ -25,19 +23,20 @@ class GameOverScene: SKScene {
     }
     
     override func didMove(to view: SKView) {
+        backgroundColor = .black
         setupBackground()
         setupUI()
         saveHighScore()
     }
     
     private func setupBackground() {
-        backgroundColor = .black
-        
+        // Overlay semi-transparente
         let overlay = SKSpriteNode(color: .black.withAlphaComponent(0.7), size: size)
         overlay.position = CGPoint(x: frame.midX, y: frame.midY)
         overlay.zPosition = -1
         addChild(overlay)
         
+        // Campo de estrellas
         for _ in 0..<50 {
             let star = SKSpriteNode(color: .white, size: CGSize(width: 2, height: 2))
             star.position = CGPoint(
@@ -54,16 +53,32 @@ class GameOverScene: SKScene {
             ])
             star.run(SKAction.repeatForever(twinkle))
         }
+        
+        // Efectos de explosión en el fondo
+        for _ in 0..<5 {
+            let explosion = SKSpriteNode(color: .orange.withAlphaComponent(0.3), size: CGSize(width: 80, height: 80))
+            explosion.position = CGPoint(
+                x: CGFloat.random(in: frame.minX...frame.maxX),
+                y: CGFloat.random(in: frame.minY...frame.maxY)
+            )
+            explosion.alpha = 0.2
+            explosion.blendMode = .add
+            explosion.zPosition = -3
+            addChild(explosion)
+            
+            let pulse = SKAction.sequence([
+                SKAction.scale(to: 1.5, duration: 2.0),
+                SKAction.scale(to: 0.5, duration: 2.0)
+            ])
+            explosion.run(SKAction.repeatForever(pulse))
+        }
     }
     
     private func setupUI() {
-        let titleText = won ? "VICTORY!" : "GAME OVER"
-        let titleColor: UIColor = won ? .green : .red
-        
-        titleLabel = SKLabelNode(text: titleText)
+        titleLabel = SKLabelNode(text: "GAME OVER")
         titleLabel?.fontName = "Helvetica-Bold"
         titleLabel?.fontSize = 48
-        titleLabel?.fontColor = titleColor
+        titleLabel?.fontColor = .red
         titleLabel?.position = CGPoint(x: frame.midX, y: frame.midY + 150)
         titleLabel?.zPosition = 10
         
@@ -114,6 +129,9 @@ class GameOverScene: SKScene {
                     SKAction.scale(to: 1.0, duration: 0.5)
                 ])
                 highScoreLabel.run(SKAction.repeatForever(pulse))
+                
+                // Efecto de celebración
+                createCelebrationEffect()
             }
         }
         
@@ -148,63 +166,43 @@ class GameOverScene: SKScene {
         return button
     }
     
-    private func setupAnimations() {
-        if won {
-            let celebrate = SKEmitterNode()
-            celebrate.particleTexture = SKTexture(imageNamed: "spark")
-            celebrate.particleBirthRate = 100
-            celebrate.particleLifetime = 2.0
-            celebrate.particleLifetimeRange = 1.0
-            celebrate.particlePositionRange = CGVector(dx: size.width, dy: 50)
-            celebrate.particleSpeed = 200
-            celebrate.particleSpeedRange = 100
-            celebrate.particleScale = 0.5
-            celebrate.particleScaleRange = 0.3
-            celebrate.particleColorRed = CGFloat.random(in: 0.5...1.0)
-            celebrate.particleColorGreen = CGFloat.random(in: 0.5...1.0)
-            celebrate.particleColorBlue = CGFloat.random(in: 0.5...1.0)
-            celebrate.particleAlpha = 0.8
-            celebrate.particleAlphaSpeed = -0.4
-            celebrate.emissionAngle = CGFloat.pi / 2
-            celebrate.emissionAngleRange = CGFloat.pi / 4
-            celebrate.position = CGPoint(x: frame.midX, y: frame.maxY)
-            celebrate.zPosition = 5
+    private func createCelebrationEffect() {
+        // Partículas de celebración
+        for _ in 0..<30 {
+            let particle = SKSpriteNode(color: [UIColor.red, UIColor.yellow, UIColor.green, UIColor.blue, UIColor.magenta].randomElement()!, size: CGSize(width: 6, height: 6))
+            particle.position = CGPoint(x: frame.midX, y: frame.midY + 200)
+            particle.zPosition = 5
+            addChild(particle)
             
-            addChild(celebrate)
+            let randomX = CGFloat.random(in: -200...200)
+            let randomY = CGFloat.random(in: -100...100)
+            let moveAction = SKAction.move(by: CGVector(dx: randomX, dy: randomY), duration: 2.0)
+            let rotateAction = SKAction.rotate(byAngle: CGFloat.pi * 2, duration: 1.0)
+            let fadeAction = SKAction.fadeOut(withDuration: 2.0)
+            let removeAction = SKAction.removeFromParent()
             
-            let stopCelebration = SKAction.sequence([
-                SKAction.wait(forDuration: 5.0),
-                SKAction.removeFromParent()
-            ])
-            celebrate.run(stopCelebration)
+            particle.run(SKAction.sequence([
+                SKAction.group([moveAction, rotateAction, fadeAction]),
+                removeAction
+            ]))
         }
-        
-        let titleAnimation = won ? createVictoryAnimation() : createGameOverAnimation()
-        titleLabel?.run(titleAnimation)
     }
     
-    private func createVictoryAnimation() -> SKAction {
-        let glow = SKAction.sequence([
-            SKAction.colorize(with: .green, colorBlendFactor: 1.0, duration: 0.5),
-            SKAction.colorize(with: .yellow, colorBlendFactor: 1.0, duration: 0.5),
-            SKAction.colorize(with: .cyan, colorBlendFactor: 1.0, duration: 0.5)
-        ])
-        
-        let scale = SKAction.sequence([
-            SKAction.scale(to: 1.1, duration: 0.3),
-            SKAction.scale(to: 1.0, duration: 0.3)
-        ])
-        
-        return SKAction.repeatForever(SKAction.group([glow, scale]))
-    }
-    
-    private func createGameOverAnimation() -> SKAction {
-        let fade = SKAction.sequence([
+    private func setupAnimations() {
+        // Animación del título
+        let titleFade = SKAction.sequence([
             SKAction.fadeAlpha(to: 0.5, duration: 1.0),
             SKAction.fadeAlpha(to: 1.0, duration: 1.0)
         ])
+        titleLabel?.run(SKAction.repeatForever(titleFade))
         
-        return SKAction.repeatForever(fade)
+        // Animación de los botones
+        let buttonPulse = SKAction.sequence([
+            SKAction.fadeAlpha(to: 0.7, duration: 1.5),
+            SKAction.fadeAlpha(to: 1.0, duration: 1.5)
+        ])
+        playAgainButton?.run(SKAction.repeatForever(buttonPulse))
+        mainMenuButton?.run(SKAction.repeatForever(buttonPulse))
     }
     
     private func saveHighScore() {
@@ -229,9 +227,6 @@ class GameOverScene: SKScene {
     }
     
     private func handleButtonTap(_ buttonName: String) {
-        SoundManager.shared.playSound(.menuSelect)
-        HapticManager.shared.playSelection()
-        
         let button = childNode(withName: buttonName)
         let scaleUp = SKAction.scale(to: 1.2, duration: 0.1)
         let scaleDown = SKAction.scale(to: 1.0, duration: 0.1)
@@ -262,8 +257,6 @@ class GameOverScene: SKScene {
     }
     
     private func playAgain() {
-        SoundManager.shared.playSound(.menuConfirm)
-        
         let transition = SKTransition.fade(withDuration: 0.5)
         let gameScene = GameScene(size: size)
         gameScene.scaleMode = scaleMode
@@ -272,8 +265,6 @@ class GameOverScene: SKScene {
     }
     
     private func goToMainMenu() {
-        SoundManager.shared.playSound(.menuConfirm)
-        
         let transition = SKTransition.fade(withDuration: 0.5)
         let mainMenuScene = MainMenuScene(size: size)
         mainMenuScene.scaleMode = scaleMode

@@ -1,269 +1,251 @@
 # Nave Morphis
 
-A retro-neon futuristic space combat game for iOS built with SpriteKit and SwiftUI.
+Un juego de combate espacial retro-neón futurista para iOS construido con SpriteKit.
 
-## Features
+## 🚀 Características Principales
 
-### Core Gameplay
-- **Twin-stick controls**: Left stick for movement, right stick for aiming and shooting
-- **Auto-fire mode**: Toggle automatic firing when aiming
-- **Power-ups**: Health, energy, shield, damage boost, rapid fire, turbo, and morph abilities
-- **Dynamic Difficulty Adjustment (DDA)**: Game adapts difficulty based on player performance
-- **Wave-based progression**: Increasingly challenging enemy waves
-- **Boss battles**: Epic mothership encounters with destructible modules
+### Gameplay Core
+- **Controles twin-stick**: Lado izquierdo para movimiento, lado derecho para disparo
+- **Auto-fire**: Disparo automático continuo cuando mantienes presionado el lado derecho
+- **Power-ups**: Los enemigos destruidos tienen 30% de posibilidad de soltar power-ups
+- **Sistema de vidas**: 3 vidas iniciales, los power-ups te dan vidas extra (máximo 5)
+- **Puntuación**: 100 puntos por enemigo, 50 por power-up, progresión de oleadas
+- **High Score**: Sistema de puntaje máximo persistente
 
-### Advanced AI
-- **Hunter enemies**: Aggressive pursuit with steering behaviors and collision avoidance
-- **Sniper enemies**: Maintain optimal distance and fire precise bursts
-- **Flocking behavior**: Enemies use separation, alignment, and cohesion for realistic group movement
-- **Smart pathfinding**: Enemies avoid boundaries and obstacles
+### Efectos Visuales
+- **Campo de estrellas animado**: 200 estrellas con movimiento parallax
+- **Nebulosa de fondo**: Efecto púrpura translúcido en movimiento continuo  
+- **Naves con glow**: Efectos de brillo cyan (jugador) y rojo (enemigos)
+- **Explosiones multicapa**: Explosión principal + 8 partículas chispeantes
+- **Power-ups animados**: Rotación, flotación y efectos de brillo magenta
+- **Flash de disparo**: Efecto visual en el cañón al disparar
 
-### Visual Effects
-- **Multi-layer parallax scrolling**: 5-layer deep space backgrounds
-- **Particle systems**: Explosions, laser trails, thrust effects, and damage sparks
-- **Screen effects**: Damage flashes, screen shake, and chromatic aberration
-- **Neon aesthetic**: Glowing effects and retro-futuristic color palette
-- **Animated nebulae**: Living background elements that move and pulse
+### IA Enemiga Inteligente
+- **Spawning dinámico**: Los enemigos aparecen desde los bordes de la pantalla
+- **Targeting inteligente**: Los enemigos se mueven hacia tu posición actual
+- **Spawn continuo**: Máximo 5 enemigos en pantalla, respawn cada 2 segundos
+- **Colisiones realistas**: Física precisa para todas las interacciones
 
-### Audio & Haptics
-- **Procedural SFX**: Dynamically generated sound effects for all game actions
-- **Core Haptics**: Immersive feedback for impacts, explosions, and power-ups
-- **Spatial audio**: Sounds positioned based on game events
-- **Adaptive audio**: Volume and intensity adjust based on game state
+### Sistema de Progresión
+- **Oleadas incrementales**: Cada 1000 puntos = nueva oleada
+- **Dificultad escalable**: Los enemigos son más frecuentes en oleadas superiores
+- **Game Over**: Pierdes cuando se te acaban las vidas
+- **Rejugabilidad**: Botones de "Play Again" y "Main Menu" al terminar
 
-### Technical Features
-- **60 FPS target**: Optimized for smooth gameplay
-- **Battery Saver mode**: Reduces effects for longer battery life
-- **Physics simulation**: Realistic collision detection and response
-- **Memory management**: Efficient particle and object pooling
-- **Accessibility support**: High contrast mode, adjustable text size, reduced motion
+## 📱 Requisitos del Sistema
 
-## Requirements
+- **iOS**: 17.0 o superior
+- **Dispositivos**: iPhone 12 o más reciente (recomendado)
+- **Orientación**: Solo landscape (horizontal)
+- **Xcode**: 15.0+ para desarrollo
 
-- **iOS**: 17.0 or later
-- **Device**: iPhone 12 or newer recommended
-- **Xcode**: 15.0 or later for development
-- **Swift**: 5.9 or later
+## 🛠️ Instalación y Configuración
 
-## Installation
+### Método 1: Crear Proyecto Nuevo (Recomendado)
 
-1. **Clone the repository**:
+1. **Crear proyecto en Xcode**:
+   - File → New → Project
+   - iOS → Game
+   - Product Name: `NaveMorphis`
+   - Bundle ID: `com.tagaa8.NaveMorphis`  
+   - Language: Swift
+   - Game Technology: **SpriteKit**
+   - Deployment Target: **iOS 17.0**
+
+2. **Configurar orientación**:
+   - Seleccionar target del proyecto
+   - Deployment Info → Device Orientation
+   - Desmarcar Portrait, dejar solo Landscape Left y Right
+
+3. **Copiar archivos del repositorio**:
    ```bash
    git clone git@github.com:tagaa8/nave_morphis.git
    cd nave_morphis
    ```
 
-2. **Open in Xcode**:
-   ```bash
-   open NaveMorphis.xcodeproj
-   ```
+4. **Reemplazar archivos en Xcode**:
+   - `AppDelegate.swift` → Copiar desde el repositorio
+   - `GameViewController.swift` → Reemplazar con el del repo
+   - Crear nuevos archivos Swift y copiar el contenido:
+     - `MainMenuScene.swift`
+     - `GameScene.swift` 
+     - `GameOverScene.swift`
 
-3. **Build and Run**:
-   - Select your target device or simulator
-   - Press Cmd+R to build and run
-   - Or use Product → Run from the menu
+5. **Assets** (opcional):
+   - Copiar carpeta completa `Assets.xcassets` del repo
+   - O usar los assets por defecto de SpriteKit
 
-## Controls
+### Método 2: Importar Proyecto Completo
 
-### Touch Controls
-- **Left side of screen**: Movement thumbstick
-  - Drag to move your ship
-  - Larger movements = faster acceleration
+Si prefieres importar todo el proyecto:
+```bash
+git clone git@github.com:tagaa8/nave_morphis.git
+cd nave_morphis
+open NaveMorphis.xcodeproj
+```
+
+**Nota**: Si obtienes errores de proyecto corrupto, usa el Método 1.
+
+## 🎮 Controles y Gameplay
+
+### Controles Táctiles
+- **Lado izquierdo de la pantalla**: Movimiento
+  - Arrastra el dedo para mover tu nave
+  - La nave se mueve proporcionalmente a tu movimiento del dedo
   
-- **Right side of screen**: Aiming and firing
-  - Tap to fire single shots
-  - Hold and drag to aim continuous fire (auto-fire mode)
-  - Distance from center determines fire direction
+- **Lado derecho de la pantalla**: Disparo
+  - **Toque simple**: Disparo único
+  - **Mantener presionado**: Auto-fire continuo (recomendado)
 
-### Power-ups
-- **Red (+)**: Restore health
-- **Blue (⚡)**: Restore energy
-- **Cyan (◊)**: Restore shield
-- **Orange (⦿)**: Damage boost
-- **Yellow (≡)**: Rapid fire
-- **Green (▶)**: Turbo speed boost
-- **Magenta (◈)**: Morph mode (triple shot)
+### Elementos de Juego
+- **Nave Jugador** (triángulo cyan): Tu nave con efecto de brillo
+- **Enemigos** (triángulos rojos): Vienen desde arriba persiguiéndote
+- **Láseres verdes**: Tus proyectiles con efecto de brillo
+- **Power-ups** (cuadrados magentas): Rotan y flotan, te dan +1 vida
 
-## Game Modes
+### HUD (Interfaz)
+- **Score**: Puntuación actual (esquina superior izquierda)
+- **Wave**: Oleada actual (centro superior)
+- **Lives**: Vidas restantes (esquina superior derecha)
+- **Instrucciones**: "Left: Move | Right: Fire" (parte inferior)
 
-### Survival Mode
-- Survive endless waves of enemies
-- Difficulty increases with each wave
-- Boss appears every 5th wave
-- High score tracking
+## 🏗️ Arquitectura del Código
 
-### Boss Rush Mode *(Future Update)*
-- Face continuous boss encounters
-- Unique boss mechanics and patterns
-- Time-based scoring system
-
-## Architecture
-
-### Project Structure
 ```
 NaveMorphis/
+├── AppDelegate.swift              # Entrada principal de la app
+├── GameViewController.swift       # Controlador principal, maneja orientación
 ├── Sources/
-│   ├── GameCore/           # Core game systems
-│   │   ├── Physics.swift   # Collision detection
-│   │   ├── GameConfig.swift # Game constants
-│   │   └── HapticManager.swift
-│   ├── Scenes/             # Game scenes
-│   │   ├── MainMenuScene.swift
-│   │   ├── GameScene.swift
-│   │   ├── PauseScene.swift
-│   │   └── GameOverScene.swift
-│   ├── Entities/           # Game objects
-│   │   ├── PlayerShipNode.swift
-│   │   ├── EnemyShipNode.swift
-│   │   ├── MothershipNode.swift
-│   │   ├── LaserNode.swift
-│   │   └── PowerUpNode.swift
-│   ├── UI/                 # User interface
-│   │   ├── HUDView.swift
-│   │   └── Controls/
-│   │       └── ThumbstickView.swift
-│   ├── FX/                 # Effects and shaders
-│   │   ├── Emitters/       # Particle effects
-│   │   └── Shaders/        # Custom shaders
-│   └── Audio/              # Audio system
-│       └── SoundManager.swift
-├── Assets.xcassets/        # Game assets
-└── Scripts/                # Build scripts
-    └── commit_push.sh
+│   └── Scenes/
+│       ├── MainMenuScene.swift    # Menú principal con estrellas animadas
+│       ├── GameScene.swift        # Lógica principal del juego
+│       └── GameOverScene.swift    # Pantalla final con high score
+└── Assets.xcassets/               # Sprites y recursos gráficos
 ```
 
-### Physics Categories
-- **Player**: `1 << 0` - Player ship
-- **Enemy**: `1 << 1` - Enemy ships  
-- **LaserPlayer**: `1 << 2` - Player projectiles
-- **LaserEnemy**: `1 << 3` - Enemy projectiles
-- **Mothership**: `1 << 4` - Boss and modules
-- **PowerUp**: `1 << 5` - Collectible items
-- **Shield**: `1 << 6` - Shield effects
-- **Boundary**: `1 << 7` - Screen boundaries
+### Clases Principales
 
-## Development
+#### MainMenuScene
+- Fondo estrellado con 100 estrellas parpadeantes
+- Título "NAVE MORPHIS" con efectos de color
+- Botón "TAP TO PLAY" con animación de pulso
+- Transición fade al GameScene
 
-### Configuration
-Game behavior can be tuned via `GameConfig.swift`:
+#### GameScene  
+- **setupBackground()**: Campo de 200 estrellas + nebulosa móvil
+- **setupPlayer()**: Crea nave triangular con física y glow
+- **createEnemy()**: Spawn enemigos con targeting inteligente  
+- **fireLaser()**: Sistema de disparo con efectos visuales
+- **didBegin()**: Maneja todas las colisiones del juego
+- **handleTouches()**: Controles twin-stick divididos por mitad de pantalla
+
+#### GameOverScene
+- Guarda high score en UserDefaults
+- Efecto de celebración si es nuevo récord
+- Opciones de "Play Again" y "Main Menu"
+- Fondo con estrellas y explosiones animadas
+
+## 🔧 Personalización y Desarrollo
+
+### Valores Configurables (en GameScene.swift)
 
 ```swift
-struct GameConfig {
-    struct Player {
-        static let maxHealth: CGFloat = 100
-        static let speed: CGFloat = 350
-        static let fireRate: TimeInterval = 0.15
-    }
-    
-    struct Enemy {
-        static let baseHealth: CGFloat = 30
-        static let baseSpeed: CGFloat = 200
-        static let difficultyScaling: CGFloat = 1.15
-    }
+// Gameplay
+private var lastEnemySpawn: TimeInterval = 0    // Control de spawn
+private var lastAutoFire: TimeInterval = 0      // Cadencia de disparo
+
+// En update()
+if currentTime - lastEnemySpawn > 2.0 && enemies.count < 5 {
+    // Cambiar 2.0 para spawn más/menos frecuente
+    // Cambiar 5 para más/menos enemigos simultáneos
+}
+
+if rightThumbstick != CGPoint.zero && currentTime - lastAutoFire > 0.2 {
+    // Cambiar 0.2 para disparo más/menos rápido
 }
 ```
 
-### Adding New Features
+### Añadir Nuevas Características
 
-1. **New Enemy Types**:
-   - Extend `EnemyType` enum in `EnemyShipNode.swift`
-   - Implement new behavior in `updateAI` method
-   - Add configuration in `GameConfig.swift`
+1. **Nuevos tipos de enemigos**:
+   - Modificar `createEnemy()` para diferentes colores/comportamientos
+   - Ajustar valores de puntuación y movimiento
 
-2. **New Power-ups**:
-   - Extend `PowerUpType` enum in `PlayerShipNode.swift`
-   - Add visual representation in `PowerUpNode.swift`
-   - Implement effect in `applyPowerUp` method
+2. **Power-ups adicionales**:
+   - Extender lógica en `didBegin()` colisión player-powerup
+   - Añadir diferentes efectos (velocidad, disparo múltiple, etc.)
 
-3. **New Scenes**:
-   - Inherit from `SKScene`
-   - Implement `didMove(to view:)` for setup
-   - Add transition logic from existing scenes
+3. **Efectos visuales**:
+   - Modificar `createExplosion()` para diferentes tipos
+   - Añadir más partículas en `setupBackground()`
 
-### Performance Tips
-- Use object pooling for frequently created/destroyed objects
-- Batch particle effects updates
-- Limit number of active sounds
-- Use texture atlases for sprites
-- Profile using Instruments for optimization
+## 🐛 Resolución de Problemas
 
-## Build Scripts
+### Errores Comunes
 
-### Commit and Push Script
-```bash
-bash Scripts/commit_push.sh
-```
+**"SKView implements focusItemsInRect"**
+- ✅ **Ignorar**: Warning normal de SpriteKit, no afecta funcionalidad
 
-This script:
-- Stages all changes with `git add -A`
-- Creates a descriptive commit message
-- Pushes to the remote repository
+**"fopen failed for data file"**  
+- ✅ **Ignorar**: Sistema creando archivos de caché automáticamente
 
-## Troubleshooting
+**"Failed to send CA Event"**
+- ✅ **Ignorar**: Métricas internas de Apple, solo en debug
 
-### Common Issues
+**Proyecto no abre en Xcode**
+- ❌ **Solución**: Usar Método 1 (crear proyecto nuevo y copiar archivos)
 
-**Build Errors**:
-- Ensure iOS deployment target is set to 17.0+
-- Check that all asset files are properly referenced
-- Verify code signing settings
+**Pantalla en blanco o "Hello World"**
+- ❌ **Causa**: GameViewController no cargó MainMenuScene correctamente
+- ✅ **Solución**: Verificar que GameViewController.swift esté reemplazado
 
-**Performance Issues**:
-- Reduce particle count in GameConfig
-- Enable Battery Saver mode
-- Close background apps on device
+**Controles no responden**
+- ❌ **Causa**: Física no configurada o escena no detecta toques
+- ✅ **Solución**: Verificar que GameScene tenga `handleTouches()` implementado
 
-**Audio Not Playing**:
-- Check device volume and silent mode
-- Verify audio session configuration
-- Ensure sound files are included in bundle
+### Debug y Testing
 
-### Debug Features
-- **Show FPS**: Enabled in GameViewController for development
-- **Physics Debug**: Can be enabled in GameViewController
-- **Node Count**: Visible during development builds
+**En Simulador**:
+- Funcionamiento básico OK
+- Controles táctiles simulados con mouse
+- Rendimiento puede ser diferente
 
-## Contributing
+**En Dispositivo Real** (recomendado):
+- Experiencia táctil completa  
+- Rendimiento real del juego
+- Test de orientación landscape
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+## 🎯 Roadmap y Mejoras Futuras
 
-### Code Style
-- Use Swift naming conventions
-- Add comments for complex algorithms
-- Keep functions focused and small
-- Use extensions to organize code
-- Follow SOLID principles
+### v1.1 (Próxima versión)
+- [ ] Sonidos y efectos de audio
+- [ ] Haptic feedback para iPhone
+- [ ] Más tipos de power-ups
+- [ ] Partículas más avanzadas
 
-## License
+### v1.2 
+- [ ] Boss battles cada 5 oleadas
+- [ ] Sistema de upgrades persistente
+- [ ] Múltiples tipos de enemigos
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+### v2.0
+- [ ] Modo multijugador local
+- [ ] Campanha con historia
+- [ ] Personalización de naves
 
-## Credits
+## 📄 Licencia
 
-**Development**: Created with Swift, SpriteKit, and SwiftUI
-**Assets**: Procedurally generated placeholder assets
-**Audio**: Dynamically generated sound effects
-**Physics**: Built on SpriteKit physics engine
-**Haptics**: Powered by Core Haptics framework
+Este proyecto está bajo la Licencia MIT. Ver archivo LICENSE para detalles.
 
-## Version History
+## 🙋‍♂️ Soporte
 
-### v1.0.0 (Current)
-- Initial release with core gameplay
-- Twin-stick controls and auto-fire
-- 7 different power-ups
-- Advanced enemy AI with flocking
-- Boss battles with destructible modules
-- Procedural audio and haptic feedback
-- Multi-layer parallax backgrounds
-- Performance optimizations
+Si encuentras problemas:
 
-### Planned Updates
-- **v1.1.0**: Additional enemy types and boss patterns
-- **v1.2.0**: Local multiplayer support
-- **v1.3.0**: Custom ship loadouts and upgrades
-- **v2.0.0**: Campaign mode with story elements
+1. **Verifica** que estés usando Xcode 15+ con iOS 17+
+2. **Intenta** el Método 1 de instalación (crear proyecto nuevo)
+3. **Revisa** que todos los archivos Swift estén agregados al target
+4. **Confirma** orientación landscape en configuración del proyecto
+
+---
+
+**¡Disfruta destruyendo naves enemigas en el espacio retro-neón! 🚀✨**
