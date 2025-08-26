@@ -209,8 +209,10 @@ class Game3DScene: SCNScene {
     }
     
     private func createPlayerShipNode() -> SCNNode {
-        // Try to load the actual USS Defiant model
-        if let url = Bundle.main.url(forResource: "uss_defiant", withExtension: "obj") {
+        // Try to load the actual USS Defiant model from Documents directory
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        let objPath = documentsPath + "/uss-defiant/source/Project Name.obj"
+        if FileManager.default.fileExists(atPath: objPath), let url = URL(string: "file://" + objPath) {
             do {
                 let scene = try SCNScene(url: url, options: nil)
                 let shipNode = SCNNode()
@@ -453,8 +455,10 @@ class Game3DScene: SCNScene {
     }
     
     private func createEnemyShipNode() -> SCNNode {
-        // Try to load the actual UFO model
-        if let url = Bundle.main.url(forResource: "ufo_enemy", withExtension: "obj") {
+        // Try to load the actual UFO model from Documents directory
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        let objPath = documentsPath + "/nave-espacial-ufo/source/Andonian_UV_UFO.obj"
+        if FileManager.default.fileExists(atPath: objPath), let url = URL(string: "file://" + objPath) {
             do {
                 let scene = try SCNScene(url: url, options: nil)
                 let enemyNode = SCNNode()
