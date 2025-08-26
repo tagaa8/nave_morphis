@@ -42,10 +42,14 @@ class Game3DViewController: UIViewController {
         sceneView.backgroundColor = UIColor.black
         
         // SceneKit settings for better performance and quality
-        sceneView.antialiasingMode = .multisampling2X
+        sceneView.antialiasingMode = .none // Disable for better performance
         sceneView.preferredFramesPerSecond = 60
         sceneView.allowsCameraControl = false
         sceneView.showsStatistics = false
+        
+        // Performance optimizations
+        sceneView.rendersContinuously = true
+        sceneView.jitteringEnabled = false
         
         // Debug options (disable in production)
         #if DEBUG

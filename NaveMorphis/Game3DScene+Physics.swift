@@ -88,6 +88,13 @@ extension Game3DScene: SCNPhysicsContactDelegate {
     }
     
     private func handleEnemyHitPlayer(enemy: SCNNode) {
+        // Check cooldown to prevent spam
+        let currentTime = CACurrentMediaTime()
+        if currentTime - lastCollisionTime < collisionCooldown {
+            return
+        }
+        lastCollisionTime = currentTime
+        
         // Create explosion at collision point
         let midPoint = SCNVector3(
             (enemy.position.x + playerShip.position.x) / 2,
@@ -221,10 +228,9 @@ extension Game3DScene: SCNPhysicsContactDelegate {
     }
     
     private func addScreenShake(intensity: Float = 1.0) {
-        guard let sceneView = self.sceneView else { return }
+        guard self.sceneView != nil else { return }
         
         let shakeAmount: Float = 0.5 * intensity
-        let shakeDuration: TimeInterval = 0.3
         
         let originalTransform = cameraNode.transform
         

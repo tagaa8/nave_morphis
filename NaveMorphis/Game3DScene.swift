@@ -31,6 +31,10 @@ class Game3DScene: SCNScene {
     private var isMovingDown = false
     private var isFiring = false
     
+    // MARK: - Collision Cooldown
+    private var lastCollisionTime: TimeInterval = 0
+    private let collisionCooldown: TimeInterval = 1.0
+    
     // MARK: - Physics Categories
     struct PhysicsCategory {
         static let none: Int = 0
@@ -302,8 +306,8 @@ class Game3DScene: SCNScene {
         updateBullets(deltaTime: deltaTime)
         updateCamera()
         
-        // Spawn enemies periodically
-        if enemyShips.count < 3 && Int(time) % 5 == 0 {
+        // Spawn enemies periodically (less frequently to avoid collision spam)
+        if enemyShips.count < 2 && Int(time) % 8 == 0 {
             spawnEnemy()
         }
     }
@@ -404,7 +408,7 @@ class Game3DScene: SCNScene {
         bullets.removeAll { bullet in
             // Move bullets forward
             let speed: Float = bullet.name?.contains("enemy") == true ? 30 : 50
-            let direction = bullet.worldTransform.m31 // Forward direction
+            let _ = bullet.worldTransform.m31 // Forward direction (unused)
             bullet.position = SCNVector3(
                 bullet.position.x,
                 bullet.position.y,
