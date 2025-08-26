@@ -7,67 +7,67 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A1A1A111234567812345678 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A101234567812345678 /* AppDelegate.swift */; };
-		1A1A1A131234567812345678 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1A1A1A121234567812345678 /* GameScene.sks */; };
-		1A1A1A151234567812345678 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1A1A1A141234567812345678 /* Actions.sks */; };
-		1A1A1A171234567812345678 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A161234567812345678 /* GameScene.swift */; };
-		1A1A1A191234567812345678 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A181234567812345678 /* GameViewController.swift */; };
-		1A1A1A1C1234567812345678 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1234567812345678 /* Main.storyboard */; };
-		1A1A1A1E1234567812345678 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1D1234567812345678 /* Assets.xcassets */; };
-		1A1A1A211234567812345678 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1F1234567812345678 /* LaunchScreen.storyboard */; };
-		1A1A1A291234567812345678 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A281234567812345678 /* MainMenuScene.swift */; };
-		1A1A1A2B1234567812345678 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A2A1234567812345678 /* GameOverScene.swift */; };
-		1A1A1A331234567812345678 /* GameScene3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A2C1234567812345678 /* GameScene3D.swift */; };
-		1A1A1A341234567812345678 /* PlayerShip3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A2D1234567812345678 /* PlayerShip3D.swift */; };
-		1A1A1A351234567812345678 /* EnemyShip3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A2E1234567812345678 /* EnemyShip3D.swift */; };
-		1A1A1A361234567812345678 /* MothershipBoss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A2F1234567812345678 /* MothershipBoss.swift */; };
-		1A1A1A371234567812345678 /* VisualEffects3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A301234567812345678 /* VisualEffects3D.swift */; };
-		1A1A1A381234567812345678 /* MainMenuScene3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A311234567812345678 /* MainMenuScene3D.swift */; };
-		1A1A1A391234567812345678 /* GameOverScene3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A321234567812345678 /* GameOverScene3D.swift */; };
-		1A1A1A401234567812345678 /* GameArena.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A3A1234567812345678 /* GameArena.swift */; };
-		1A1A1A411234567812345678 /* PlayerShipNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A3B1234567812345678 /* PlayerShipNode.swift */; };
-		1A1A1A421234567812345678 /* EnemyShipNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A3C1234567812345678 /* EnemyShipNode.swift */; };
-		1A1A1A431234567812345678 /* VirtualJoystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A3D1234567812345678 /* VirtualJoystick.swift */; };
-		1A1A1A441234567812345678 /* FireButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A3E1234567812345678 /* FireButton.swift */; };
-		1A1A1A451234567812345678 /* BulletNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A3F1234567812345678 /* BulletNode.swift */; };
-		1A1A1A461234567812345678 /* ExplosionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A471234567812345678 /* ExplosionNode.swift */; };
-		1A1A1A471234567812345678 /* PowerUpNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A481234567812345678 /* PowerUpNode.swift */; };
-		1A1A1A481234567812345678 /* GameOverArena.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A491234567812345678 /* GameOverArena.swift */; };
+		E51A2B001F2A34D800123456 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2AFF1F2A34D800123456 /* AppDelegate.swift */; };
+		E51A2B041F2A34D800123456 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E51A2B031F2A34D800123456 /* GameScene.sks */; };
+		E51A2B061F2A34D800123456 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = E51A2B051F2A34D800123456 /* Actions.sks */; };
+		E51A2B081F2A34D800123456 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B071F2A34D800123456 /* GameScene.swift */; };
+		E51A2B0A1F2A34D800123456 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B091F2A34D800123456 /* GameViewController.swift */; };
+		E51A2B0D1F2A34D800123456 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E51A2B0B1F2A34D800123456 /* Main.storyboard */; };
+		E51A2B0F1F2A34D800123456 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E51A2B0E1F2A34D800123456 /* Assets.xcassets */; };
+		E51A2B121F2A34D800123456 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E51A2B101F2A34D800123456 /* LaunchScreen.storyboard */; };
+		E51A2B201F2A34D800123456 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B1F1F2A34D800123456 /* MainMenuScene.swift */; };
+		E51A2B221F2A34D800123456 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B211F2A34D800123456 /* GameOverScene.swift */; };
+		E51A2B241F2A34D800123456 /* GameScene3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B231F2A34D800123456 /* GameScene3D.swift */; };
+		E51A2B261F2A34D800123456 /* PlayerShip3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B251F2A34D800123456 /* PlayerShip3D.swift */; };
+		E51A2B281F2A34D800123456 /* EnemyShip3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B271F2A34D800123456 /* EnemyShip3D.swift */; };
+		E51A2B2A1F2A34D800123456 /* MothershipBoss.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B291F2A34D800123456 /* MothershipBoss.swift */; };
+		E51A2B2C1F2A34D800123456 /* VisualEffects3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B2B1F2A34D800123456 /* VisualEffects3D.swift */; };
+		E51A2B2E1F2A34D800123456 /* MainMenuScene3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B2D1F2A34D800123456 /* MainMenuScene3D.swift */; };
+		E51A2B301F2A34D800123456 /* GameOverScene3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B2F1F2A34D800123456 /* GameOverScene3D.swift */; };
+		E51A2B321F2A34D800123456 /* GameArena.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B311F2A34D800123456 /* GameArena.swift */; };
+		E51A2B341F2A34D800123456 /* PlayerShipNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B331F2A34D800123456 /* PlayerShipNode.swift */; };
+		E51A2B361F2A34D800123456 /* EnemyShipNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B351F2A34D800123456 /* EnemyShipNode.swift */; };
+		E51A2B381F2A34D800123456 /* VirtualJoystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B371F2A34D800123456 /* VirtualJoystick.swift */; };
+		E51A2B3A1F2A34D800123456 /* FireButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B391F2A34D800123456 /* FireButton.swift */; };
+		E51A2B3C1F2A34D800123456 /* BulletNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B3B1F2A34D800123456 /* BulletNode.swift */; };
+		E51A2B3E1F2A34D800123456 /* ExplosionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B3D1F2A34D800123456 /* ExplosionNode.swift */; };
+		E51A2B401F2A34D800123456 /* PowerUpNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B3F1F2A34D800123456 /* PowerUpNode.swift */; };
+		E51A2B421F2A34D800123456 /* GameOverArena.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B411F2A34D800123456 /* GameOverArena.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1A1A1A0D1234567812345678 /* NaveMorphis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaveMorphis.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A1A1A101234567812345678 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1A1A1A121234567812345678 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		1A1A1A141234567812345678 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		1A1A1A161234567812345678 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		1A1A1A181234567812345678 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		1A1A1A1B1234567812345678 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1A1A1A1D1234567812345678 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1A1A1A201234567812345678 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		1A1A1A221234567812345678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1A1A1A281234567812345678 /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
-		1A1A1A2A1234567812345678 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
-		1A1A1A2C1234567812345678 /* GameScene3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene3D.swift; sourceTree = "<group>"; };
-		1A1A1A2D1234567812345678 /* PlayerShip3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerShip3D.swift; sourceTree = "<group>"; };
-		1A1A1A2E1234567812345678 /* EnemyShip3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyShip3D.swift; sourceTree = "<group>"; };
-		1A1A1A2F1234567812345678 /* MothershipBoss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MothershipBoss.swift; sourceTree = "<group>"; };
-		1A1A1A301234567812345678 /* VisualEffects3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffects3D.swift; sourceTree = "<group>"; };
-		1A1A1A311234567812345678 /* MainMenuScene3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene3D.swift; sourceTree = "<group>"; };
-		1A1A1A321234567812345678 /* GameOverScene3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene3D.swift; sourceTree = "<group>"; };
-		1A1A1A3A1234567812345678 /* GameArena.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameArena.swift; sourceTree = "<group>"; };
-		1A1A1A3B1234567812345678 /* PlayerShipNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerShipNode.swift; sourceTree = "<group>"; };
-		1A1A1A3C1234567812345678 /* EnemyShipNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyShipNode.swift; sourceTree = "<group>"; };
-		1A1A1A3D1234567812345678 /* VirtualJoystick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualJoystick.swift; sourceTree = "<group>"; };
-		1A1A1A3E1234567812345678 /* FireButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireButton.swift; sourceTree = "<group>"; };
-		1A1A1A3F1234567812345678 /* BulletNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletNode.swift; sourceTree = "<group>"; };
-		1A1A1A471234567812345678 /* ExplosionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplosionNode.swift; sourceTree = "<group>"; };
-		1A1A1A481234567812345678 /* PowerUpNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerUpNode.swift; sourceTree = "<group>"; };
-		1A1A1A491234567812345678 /* GameOverArena.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverArena.swift; sourceTree = "<group>"; };
+		E51A2AFC1F2A34D800123456 /* NaveMorphis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaveMorphis.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E51A2AFF1F2A34D800123456 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E51A2B031F2A34D800123456 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		E51A2B051F2A34D800123456 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		E51A2B071F2A34D800123456 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		E51A2B091F2A34D800123456 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		E51A2B0C1F2A34D800123456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E51A2B0E1F2A34D800123456 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E51A2B111F2A34D800123456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E51A2B131F2A34D800123456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E51A2B1F1F2A34D800123456 /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
+		E51A2B211F2A34D800123456 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		E51A2B231F2A34D800123456 /* GameScene3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene3D.swift; sourceTree = "<group>"; };
+		E51A2B251F2A34D800123456 /* PlayerShip3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerShip3D.swift; sourceTree = "<group>"; };
+		E51A2B271F2A34D800123456 /* EnemyShip3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyShip3D.swift; sourceTree = "<group>"; };
+		E51A2B291F2A34D800123456 /* MothershipBoss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MothershipBoss.swift; sourceTree = "<group>"; };
+		E51A2B2B1F2A34D800123456 /* VisualEffects3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffects3D.swift; sourceTree = "<group>"; };
+		E51A2B2D1F2A34D800123456 /* MainMenuScene3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene3D.swift; sourceTree = "<group>"; };
+		E51A2B2F1F2A34D800123456 /* GameOverScene3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene3D.swift; sourceTree = "<group>"; };
+		E51A2B311F2A34D800123456 /* GameArena.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameArena.swift; sourceTree = "<group>"; };
+		E51A2B331F2A34D800123456 /* PlayerShipNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerShipNode.swift; sourceTree = "<group>"; };
+		E51A2B351F2A34D800123456 /* EnemyShipNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyShipNode.swift; sourceTree = "<group>"; };
+		E51A2B371F2A34D800123456 /* VirtualJoystick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualJoystick.swift; sourceTree = "<group>"; };
+		E51A2B391F2A34D800123456 /* FireButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireButton.swift; sourceTree = "<group>"; };
+		E51A2B3B1F2A34D800123456 /* BulletNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletNode.swift; sourceTree = "<group>"; };
+		E51A2B3D1F2A34D800123456 /* ExplosionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplosionNode.swift; sourceTree = "<group>"; };
+		E51A2B3F1F2A34D800123456 /* PowerUpNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerUpNode.swift; sourceTree = "<group>"; };
+		E51A2B411F2A34D800123456 /* GameOverArena.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverArena.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1A1A1A0A1234567812345678 /* Frameworks */ = {
+		E51A2AF91F2A34D800123456 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -77,84 +77,84 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1A1A1A041234567812345678 = {
+		E51A2AF31F2A34D800123456 = {
 			isa = PBXGroup;
 			children = (
-				1A1A1A0F1234567812345678 /* NaveMorphis */,
-				1A1A1A0E1234567812345678 /* Products */,
+				E51A2AFE1F2A34D800123456 /* NaveMorphis */,
+				E51A2AFD1F2A34D800123456 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		1A1A1A0E1234567812345678 /* Products */ = {
+		E51A2AFD1F2A34D800123456 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1A1A1A0D1234567812345678 /* NaveMorphis.app */,
+				E51A2AFC1F2A34D800123456 /* NaveMorphis.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1A1A1A0F1234567812345678 /* NaveMorphis */ = {
+		E51A2AFE1F2A34D800123456 /* NaveMorphis */ = {
 			isa = PBXGroup;
 			children = (
-				1A1A1A101234567812345678 /* AppDelegate.swift */,
-				1A1A1A181234567812345678 /* GameViewController.swift */,
-				1A1A1A4A1234567812345678 /* Game Arena */,
-				1A1A1A4B1234567812345678 /* Legacy 3D Game */,
-				1A1A1A4C1234567812345678 /* Resources */,
-				1A1A1A4D1234567812345678 /* Storyboards */,
-				1A1A1A221234567812345678 /* Info.plist */,
+				E51A2AFF1F2A34D800123456 /* AppDelegate.swift */,
+				E51A2B091F2A34D800123456 /* GameViewController.swift */,
+				E51A2B431F2A34D800123456 /* Game Arena */,
+				E51A2B441F2A34D800123456 /* Legacy 3D Game */,
+				E51A2B451F2A34D800123456 /* Resources */,
+				E51A2B461F2A34D800123456 /* Storyboards */,
+				E51A2B131F2A34D800123456 /* Info.plist */,
 			);
 			path = NaveMorphis;
 			sourceTree = "<group>";
 		};
-		1A1A1A4A1234567812345678 /* Game Arena */ = {
+		E51A2B431F2A34D800123456 /* Game Arena */ = {
 			isa = PBXGroup;
 			children = (
-				1A1A1A3A1234567812345678 /* GameArena.swift */,
-				1A1A1A3B1234567812345678 /* PlayerShipNode.swift */,
-				1A1A1A3C1234567812345678 /* EnemyShipNode.swift */,
-				1A1A1A3D1234567812345678 /* VirtualJoystick.swift */,
-				1A1A1A3E1234567812345678 /* FireButton.swift */,
-				1A1A1A3F1234567812345678 /* BulletNode.swift */,
-				1A1A1A471234567812345678 /* ExplosionNode.swift */,
-				1A1A1A481234567812345678 /* PowerUpNode.swift */,
-				1A1A1A491234567812345678 /* GameOverArena.swift */,
+				E51A2B311F2A34D800123456 /* GameArena.swift */,
+				E51A2B331F2A34D800123456 /* PlayerShipNode.swift */,
+				E51A2B351F2A34D800123456 /* EnemyShipNode.swift */,
+				E51A2B371F2A34D800123456 /* VirtualJoystick.swift */,
+				E51A2B391F2A34D800123456 /* FireButton.swift */,
+				E51A2B3B1F2A34D800123456 /* BulletNode.swift */,
+				E51A2B3D1F2A34D800123456 /* ExplosionNode.swift */,
+				E51A2B3F1F2A34D800123456 /* PowerUpNode.swift */,
+				E51A2B411F2A34D800123456 /* GameOverArena.swift */,
 			);
 			name = "Game Arena";
 			sourceTree = "<group>";
 		};
-		1A1A1A4B1234567812345678 /* Legacy 3D Game */ = {
+		E51A2B441F2A34D800123456 /* Legacy 3D Game */ = {
 			isa = PBXGroup;
 			children = (
-				1A1A1A161234567812345678 /* GameScene.swift */,
-				1A1A1A281234567812345678 /* MainMenuScene.swift */,
-				1A1A1A2A1234567812345678 /* GameOverScene.swift */,
-				1A1A1A2C1234567812345678 /* GameScene3D.swift */,
-				1A1A1A2D1234567812345678 /* PlayerShip3D.swift */,
-				1A1A1A2E1234567812345678 /* EnemyShip3D.swift */,
-				1A1A1A2F1234567812345678 /* MothershipBoss.swift */,
-				1A1A1A301234567812345678 /* VisualEffects3D.swift */,
-				1A1A1A311234567812345678 /* MainMenuScene3D.swift */,
-				1A1A1A321234567812345678 /* GameOverScene3D.swift */,
+				E51A2B071F2A34D800123456 /* GameScene.swift */,
+				E51A2B1F1F2A34D800123456 /* MainMenuScene.swift */,
+				E51A2B211F2A34D800123456 /* GameOverScene.swift */,
+				E51A2B231F2A34D800123456 /* GameScene3D.swift */,
+				E51A2B251F2A34D800123456 /* PlayerShip3D.swift */,
+				E51A2B271F2A34D800123456 /* EnemyShip3D.swift */,
+				E51A2B291F2A34D800123456 /* MothershipBoss.swift */,
+				E51A2B2B1F2A34D800123456 /* VisualEffects3D.swift */,
+				E51A2B2D1F2A34D800123456 /* MainMenuScene3D.swift */,
+				E51A2B2F1F2A34D800123456 /* GameOverScene3D.swift */,
 			);
 			name = "Legacy 3D Game";
 			sourceTree = "<group>";
 		};
-		1A1A1A4C1234567812345678 /* Resources */ = {
+		E51A2B451F2A34D800123456 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1A1A1A121234567812345678 /* GameScene.sks */,
-				1A1A1A141234567812345678 /* Actions.sks */,
-				1A1A1A1D1234567812345678 /* Assets.xcassets */,
+				E51A2B031F2A34D800123456 /* GameScene.sks */,
+				E51A2B051F2A34D800123456 /* Actions.sks */,
+				E51A2B0E1F2A34D800123456 /* Assets.xcassets */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		1A1A1A4D1234567812345678 /* Storyboards */ = {
+		E51A2B461F2A34D800123456 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				1A1A1A1A1234567812345678 /* Main.storyboard */,
-				1A1A1A1F1234567812345678 /* LaunchScreen.storyboard */,
+				E51A2B0B1F2A34D800123456 /* Main.storyboard */,
+				E51A2B101F2A34D800123456 /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -162,13 +162,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1A1A1A0C1234567812345678 /* NaveMorphis */ = {
+		E51A2AFB1F2A34D800123456 /* NaveMorphis */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1A1A1A251234567812345678 /* Build configuration list for PBXNativeTarget "NaveMorphis" */;
+			buildConfigurationList = E51A2B161F2A34D800123456 /* Build configuration list for PBXNativeTarget "NaveMorphis" */;
 			buildPhases = (
-				1A1A1A091234567812345678 /* Sources */,
-				1A1A1A0A1234567812345678 /* Frameworks */,
-				1A1A1A0B1234567812345678 /* Resources */,
+				E51A2AF81F2A34D800123456 /* Sources */,
+				E51A2AF91F2A34D800123456 /* Frameworks */,
+				E51A2AFA1F2A34D800123456 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -176,25 +176,25 @@
 			);
 			name = NaveMorphis;
 			productName = NaveMorphis;
-			productReference = 1A1A1A0D1234567812345678 /* NaveMorphis.app */;
+			productReference = E51A2AFC1F2A34D800123456 /* NaveMorphis.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1A1A1A051234567812345678 /* Project object */ = {
+		E51A2AF41F2A34D800123456 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					1A1A1A0C1234567812345678 = {
+					E51A2AFB1F2A34D800123456 = {
 						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
-			buildConfigurationList = 1A1A1A081234567812345678 /* Build configuration list for PBXProject "NaveMorphis" */;
+			buildConfigurationList = E51A2AF71F2A34D800123456 /* Build configuration list for PBXProject "NaveMorphis" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -202,75 +202,75 @@
 				en,
 				Base,
 			);
-			mainGroup = 1A1A1A041234567812345678;
-			productRefGroup = 1A1A1A0E1234567812345678 /* Products */;
+			mainGroup = E51A2AF31F2A34D800123456;
+			productRefGroup = E51A2AFD1F2A34D800123456 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1A1A1A0C1234567812345678 /* NaveMorphis */,
+				E51A2AFB1F2A34D800123456 /* NaveMorphis */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1A1A1A0B1234567812345678 /* Resources */ = {
+		E51A2AFA1F2A34D800123456 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A1A1A131234567812345678 /* GameScene.sks in Resources */,
-				1A1A1A1E1234567812345678 /* Assets.xcassets in Resources */,
-				1A1A1A151234567812345678 /* Actions.sks in Resources */,
-				1A1A1A1C1234567812345678 /* Main.storyboard in Resources */,
-				1A1A1A211234567812345678 /* LaunchScreen.storyboard in Resources */,
+				E51A2B041F2A34D800123456 /* GameScene.sks in Resources */,
+				E51A2B0F1F2A34D800123456 /* Assets.xcassets in Resources */,
+				E51A2B061F2A34D800123456 /* Actions.sks in Resources */,
+				E51A2B0D1F2A34D800123456 /* Main.storyboard in Resources */,
+				E51A2B121F2A34D800123456 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1A1A1A091234567812345678 /* Sources */ = {
+		E51A2AF81F2A34D800123456 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A1A1A171234567812345678 /* GameScene.swift in Sources */,
-				1A1A1A191234567812345678 /* GameViewController.swift in Sources */,
-				1A1A1A111234567812345678 /* AppDelegate.swift in Sources */,
-				1A1A1A291234567812345678 /* MainMenuScene.swift in Sources */,
-				1A1A1A2B1234567812345678 /* GameOverScene.swift in Sources */,
-				1A1A1A331234567812345678 /* GameScene3D.swift in Sources */,
-				1A1A1A341234567812345678 /* PlayerShip3D.swift in Sources */,
-				1A1A1A351234567812345678 /* EnemyShip3D.swift in Sources */,
-				1A1A1A361234567812345678 /* MothershipBoss.swift in Sources */,
-				1A1A1A371234567812345678 /* VisualEffects3D.swift in Sources */,
-				1A1A1A381234567812345678 /* MainMenuScene3D.swift in Sources */,
-				1A1A1A391234567812345678 /* GameOverScene3D.swift in Sources */,
-				1A1A1A401234567812345678 /* GameArena.swift in Sources */,
-				1A1A1A411234567812345678 /* PlayerShipNode.swift in Sources */,
-				1A1A1A421234567812345678 /* EnemyShipNode.swift in Sources */,
-				1A1A1A431234567812345678 /* VirtualJoystick.swift in Sources */,
-				1A1A1A441234567812345678 /* FireButton.swift in Sources */,
-				1A1A1A451234567812345678 /* BulletNode.swift in Sources */,
-				1A1A1A461234567812345678 /* ExplosionNode.swift in Sources */,
-				1A1A1A471234567812345678 /* PowerUpNode.swift in Sources */,
-				1A1A1A481234567812345678 /* GameOverArena.swift in Sources */,
+				E51A2B081F2A34D800123456 /* GameScene.swift in Sources */,
+				E51A2B0A1F2A34D800123456 /* GameViewController.swift in Sources */,
+				E51A2B001F2A34D800123456 /* AppDelegate.swift in Sources */,
+				E51A2B201F2A34D800123456 /* MainMenuScene.swift in Sources */,
+				E51A2B221F2A34D800123456 /* GameOverScene.swift in Sources */,
+				E51A2B241F2A34D800123456 /* GameScene3D.swift in Sources */,
+				E51A2B261F2A34D800123456 /* PlayerShip3D.swift in Sources */,
+				E51A2B281F2A34D800123456 /* EnemyShip3D.swift in Sources */,
+				E51A2B2A1F2A34D800123456 /* MothershipBoss.swift in Sources */,
+				E51A2B2C1F2A34D800123456 /* VisualEffects3D.swift in Sources */,
+				E51A2B2E1F2A34D800123456 /* MainMenuScene3D.swift in Sources */,
+				E51A2B301F2A34D800123456 /* GameOverScene3D.swift in Sources */,
+				E51A2B321F2A34D800123456 /* GameArena.swift in Sources */,
+				E51A2B341F2A34D800123456 /* PlayerShipNode.swift in Sources */,
+				E51A2B361F2A34D800123456 /* EnemyShipNode.swift in Sources */,
+				E51A2B381F2A34D800123456 /* VirtualJoystick.swift in Sources */,
+				E51A2B3A1F2A34D800123456 /* FireButton.swift in Sources */,
+				E51A2B3C1F2A34D800123456 /* BulletNode.swift in Sources */,
+				E51A2B3E1F2A34D800123456 /* ExplosionNode.swift in Sources */,
+				E51A2B401F2A34D800123456 /* PowerUpNode.swift in Sources */,
+				E51A2B421F2A34D800123456 /* GameOverArena.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1A1A1A1A1234567812345678 /* Main.storyboard */ = {
+		E51A2B0B1F2A34D800123456 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1A1A1A1B1234567812345678 /* Base */,
+				E51A2B0C1F2A34D800123456 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		1A1A1A1F1234567812345678 /* LaunchScreen.storyboard */ = {
+		E51A2B101F2A34D800123456 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1A1A1A201234567812345678 /* Base */,
+				E51A2B111F2A34D800123456 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -278,7 +278,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1A1A1A231234567812345678 /* Debug */ = {
+		E51A2B141F2A34D800123456 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -341,7 +341,7 @@
 			};
 			name = Debug;
 		};
-		1A1A1A241234567812345678 /* Release */ = {
+		E51A2B151F2A34D800123456 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -397,7 +397,7 @@
 			};
 			name = Release;
 		};
-		1A1A1A261234567812345678 /* Debug */ = {
+		E51A2B171F2A34D800123456 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -430,7 +430,7 @@
 			};
 			name = Debug;
 		};
-		1A1A1A271234567812345678 /* Release */ = {
+		E51A2B181F2A34D800123456 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -466,25 +466,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1A1A1A081234567812345678 /* Build configuration list for PBXProject "NaveMorphis" */ = {
+		E51A2AF71F2A34D800123456 /* Build configuration list for PBXProject "NaveMorphis" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1A1A1A231234567812345678 /* Debug */,
-				1A1A1A241234567812345678 /* Release */,
+				E51A2B141F2A34D800123456 /* Debug */,
+				E51A2B151F2A34D800123456 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1A1A1A251234567812345678 /* Build configuration list for PBXNativeTarget "NaveMorphis" */ = {
+		E51A2B161F2A34D800123456 /* Build configuration list for PBXNativeTarget "NaveMorphis" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1A1A1A261234567812345678 /* Debug */,
-				1A1A1A271234567812345678 /* Release */,
+				E51A2B171F2A34D800123456 /* Debug */,
+				E51A2B181F2A34D800123456 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 1A1A1A051234567812345678 /* Project object */;
+	rootObject = E51A2AF41F2A34D800123456 /* Project object */;
 }
