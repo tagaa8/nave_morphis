@@ -10,22 +10,24 @@ class GameViewController: UIViewController {
         // Configurar orientación
         setupOrientation()
         
-        if let view = self.view as! SKView? {
-            // Cargar la escena del menú principal
-            let scene = MainMenuScene(size: view.bounds.size)
-            scene.scaleMode = .aspectFill
-            
-            view.presentScene(scene)
-            
-            view.ignoresSiblingOrder = true
-            
-            // Configuración de debug (solo en desarrollo)
-            #if DEBUG
-            view.showsFPS = true
-            view.showsNodeCount = true
-            view.showsPhysics = false
-            #endif
+        guard let skView = self.view as? SKView else {
+            print("Error: View is not SKView")
+            return
         }
+        
+        // Cargar la escena del menú principal
+        let scene = MainMenuScene(size: skView.bounds.size)
+        scene.scaleMode = .aspectFill
+        
+        skView.presentScene(scene)
+        skView.ignoresSiblingOrder = true
+        
+        // Configuración de debug (solo en desarrollo)
+        #if DEBUG
+        skView.showsFPS = true
+        skView.showsNodeCount = true
+        skView.showsPhysics = false
+        #endif
         
         setupNotifications()
     }
