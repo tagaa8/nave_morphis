@@ -271,7 +271,7 @@ class Game3DScene: SCNScene {
         
         // Bridge/cockpit
         let bridgeGeometry = SCNSphere(radius: 0.4)
-        bridgeGeometry.firstMaterial?.diffuse.contents = UIColor.lightBlue
+        bridgeGeometry.firstMaterial?.diffuse.contents = UIColor(red: 0.7, green: 0.9, blue: 1.0, alpha: 1.0)
         bridgeGeometry.firstMaterial?.transparency = 0.8
         let bridge = SCNNode(geometry: bridgeGeometry)
         bridge.position = SCNVector3(0, 0.6, 1)
@@ -310,7 +310,6 @@ class Game3DScene: SCNScene {
     
     private func updatePlayerMovement(deltaTime: TimeInterval) {
         let moveSpeed: Float = 20.0
-        let rotateSpeed: Float = 2.0
         
         var movement = SCNVector3(0, 0, 0)
         
@@ -561,8 +560,8 @@ class Game3DScene: SCNScene {
         flash.particleSize = 0.5
         playerShip.addParticleSystem(flash)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            playerShip.removeParticleSystem(flash)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [weak self] in
+            self?.playerShip.removeParticleSystem(flash)
         }
     }
     
