@@ -7,13 +7,13 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Crear SKView programáticamente
+        let skView = SKView(frame: view.bounds)
+        skView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.addSubview(skView)
+        
         // Configurar orientación
         setupOrientation()
-        
-        guard let skView = self.view as? SKView else {
-            print("Error: View is not SKView")
-            return
-        }
         
         // Cargar la escena del menú principal
         let scene = MainMenuScene(size: skView.bounds.size)
@@ -71,7 +71,7 @@ class GameViewController: UIViewController {
     }
     
     @objc private func gameWillResignActive() {
-        if let skView = view as? SKView,
+        if let skView = view.subviews.first as? SKView,
            let gameScene = skView.scene as? GameScene {
             // Pausar juego si está activo
             gameScene.isPaused = true
@@ -79,7 +79,7 @@ class GameViewController: UIViewController {
     }
     
     @objc private func gameDidEnterBackground() {
-        if let skView = view as? SKView {
+        if let skView = view.subviews.first as? SKView {
             skView.isPaused = true
         }
     }
@@ -89,12 +89,9 @@ class GameViewController: UIViewController {
     }
     
     @objc private func gameDidBecomeActive() {
-        if let skView = view as? SKView {
+        if let skView = view.subviews.first as? SKView {
             skView.isPaused = false
-        }
-        
-        if let gameScene = view.subviews.first as? SKView {
-            if let scene = gameScene.scene as? GameScene {
+            if let scene = skView.scene as? GameScene {
                 scene.isPaused = false
             }
         }
