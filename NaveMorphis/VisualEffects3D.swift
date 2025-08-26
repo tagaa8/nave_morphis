@@ -561,12 +561,16 @@ class ExplosionEffect3D: SKNode {
     
     private func createSecondaryEffects(type: ExplosionType) {
         switch type {
-        case .enemy, .mothership:
+        case .enemy:
             // Add shockwave effect
             createShockwave()
             // Add sparks
             createSparks()
         case .mothership:
+            // Add shockwave effect
+            createShockwave()
+            // Add sparks
+            createSparks()
             // Additional effects for mothership
             createDebrisField()
         default:

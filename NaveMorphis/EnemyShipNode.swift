@@ -24,7 +24,8 @@ class EnemyShipNode: SKSpriteNode {
     
     init() {
         let texture = SKTexture(imageNamed: "enemy_ship")
-        super.init(texture: texture, color: .clear, size: texture.size())
+        let shipSize = CGSize(width: 50, height: 50)  // Fixed size
+        super.init(texture: texture, color: .clear, size: shipSize)
         
         setupPhysics()
         setupVisuals()

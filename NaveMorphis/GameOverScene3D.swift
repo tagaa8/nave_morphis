@@ -209,13 +209,13 @@ class GameOverScene3D: SKScene {
         
         // Calculate additional stats
         let avgPointsPerWave = wave > 0 ? finalScore / wave : 0
-        let survivalTime = wave * 30 // Approximate seconds per wave
+        let survivalTime = wave * 30
         
         let details = [
-            "Points per Wave: \\(avgPointsPerWave)",
-            "Estimated Survival: \\(survivalTime)s",
-            "Enemies Defeated: ~\\(finalScore / 100)",
-            "Accuracy Rating: \\(getAccuracyRating())%"
+            "Points per Wave: \(avgPointsPerWave)",
+            "Estimated Survival: \(survivalTime)s",
+            "Enemies Defeated: ~\(finalScore / 100)",
+            "Accuracy Rating: \(getAccuracyRating())%"
         ]
         
         for (index, detail) in details.enumerated() {

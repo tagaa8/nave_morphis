@@ -90,10 +90,10 @@ class GameArena: SKScene, SKPhysicsContactDelegate {
         
         // Main arena background (the purple map)
         arenaBackground = SKSpriteNode(imageNamed: "mothership_or_map")
-        arenaBackground.size = CGSize(width: size.width * 0.9, height: size.height * 0.85)
+        arenaBackground.size = CGSize(width: size.width * 0.95, height: size.height * 0.9)
         arenaBackground.position = CGPoint(x: frame.midX, y: frame.midY)
         arenaBackground.zPosition = -10
-        arenaBackground.alpha = 0.3
+        arenaBackground.alpha = 0.6  // Make it more visible
         addChild(arenaBackground)
         
         // Create grid effect overlay
@@ -561,7 +561,6 @@ class GameArena: SKScene, SKPhysicsContactDelegate {
         // Enemy bullet hits player
         else if collision == PhysicsCategory.enemyBullet | PhysicsCategory.player {
             let bullet = contact.bodyA.categoryBitMask == PhysicsCategory.enemyBullet ? contact.bodyA.node : contact.bodyB.node
-            let player = contact.bodyA.categoryBitMask == PhysicsCategory.player ? contact.bodyA.node : contact.bodyB.node
             
             handleEnemyBulletHitPlayer(bullet: bullet as? BulletNode)
         }

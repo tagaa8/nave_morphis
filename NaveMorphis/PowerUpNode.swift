@@ -35,7 +35,7 @@ class PowerUpNode: SKSpriteNode {
     init(type: PowerUpType) {
         self.powerUpType = type
         
-        let texture = SKTexture(imageNamed: "spark") // Using spark as base
+        let texture = PowerUpNode.createPowerUpTexture()
         super.init(texture: texture, color: type.color, size: CGSize(width: 30, height: 30))
         
         colorBlendFactor = 0.7
@@ -82,7 +82,7 @@ class PowerUpNode: SKSpriteNode {
         
         // Add sparkle particles
         let sparkles = SKEmitterNode()
-        sparkles.particleTexture = SKTexture(imageNamed: "spark")
+        sparkles.particleTexture = PowerUpNode.createPowerUpTexture()
         sparkles.particleLifetime = 1.0
         sparkles.particleBirthRate = 20
         
@@ -171,7 +171,7 @@ class PowerUpNode: SKSpriteNode {
         
         // Create collection effect
         let collectEffect = SKEmitterNode()
-        collectEffect.particleTexture = SKTexture(imageNamed: "spark")
+        collectEffect.particleTexture = PowerUpNode.createPowerUpTexture()
         collectEffect.particleLifetime = 0.5
         collectEffect.particleBirthRate = 100
         collectEffect.numParticlesToEmit = 20
@@ -197,5 +197,15 @@ class PowerUpNode: SKSpriteNode {
             SKAction.wait(forDuration: 1.0),
             SKAction.removeFromParent()
         ]))
+    }
+    
+    static func createPowerUpTexture() -> SKTexture {
+        let size = CGSize(width: 8, height: 8)
+        let renderer = UIGraphicsImageRenderer(size: size)
+        let image = renderer.image { context in
+            context.cgContext.setFillColor(UIColor.white.cgColor)
+            context.cgContext.fillEllipse(in: CGRect(origin: .zero, size: size))
+        }
+        return SKTexture(image: image)
     }
 }

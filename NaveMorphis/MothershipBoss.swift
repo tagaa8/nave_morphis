@@ -143,10 +143,9 @@ class MothershipBoss: SKSpriteNode {
             CGPoint(x: 0, y: -size.height * 0.3)
         ]
         
-        for (index, position) in modulePositions.enumerated() {
+        for (_, position) in modulePositions.enumerated() {
             let module = DestructibleModule(type: .weapon, health: 15)
             module.position = position
-            module.name = "weapon_module_\\(index)"
             addChild(module)
             destructibleModules.append(module)
         }

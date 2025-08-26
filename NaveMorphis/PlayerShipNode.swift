@@ -11,7 +11,8 @@ class PlayerShipNode: SKSpriteNode {
     
     init() {
         let texture = SKTexture(imageNamed: "player_ship")
-        super.init(texture: texture, color: .clear, size: texture.size())
+        let shipSize = CGSize(width: 60, height: 60)  // Fixed size
+        super.init(texture: texture, color: .clear, size: shipSize)
         
         setupPhysics()
         setupVisuals()
@@ -58,7 +59,11 @@ class PlayerShipNode: SKSpriteNode {
     
     private func setupThrustParticles() {
         thrustParticles = SKEmitterNode()
-        thrustParticles.particleTexture = SKTexture(imageNamed: "spark")
+        
+        // Create simple particle texture programmatically
+        let particleTexture = createSimpleParticleTexture()
+        thrustParticles.particleTexture = particleTexture
+        
         thrustParticles.particleLifetime = 0.3
         thrustParticles.particleBirthRate = 0
         thrustParticles.particlePositionRange = CGVector(dx: 8, dy: 4)
@@ -82,6 +87,16 @@ class PlayerShipNode: SKSpriteNode {
         thrustParticles.position = CGPoint(x: 0, y: -size.height/2 - 5)
         thrustParticles.zPosition = -2
         addChild(thrustParticles)
+    }
+    
+    private func createSimpleParticleTexture() -> SKTexture {
+        let size = CGSize(width: 8, height: 8)
+        let renderer = UIGraphicsImageRenderer(size: size)
+        let image = renderer.image { context in
+            context.cgContext.setFillColor(UIColor.white.cgColor)
+            context.cgContext.fillEllipse(in: CGRect(origin: .zero, size: size))
+        }
+        return SKTexture(image: image)
     }
     
     func showThrust(_ show: Bool) {

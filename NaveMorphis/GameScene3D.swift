@@ -275,7 +275,7 @@ class GameScene3D: SKScene, SKPhysicsContactDelegate {
         let newWave = (score / 1000) + 1
         if newWave > wave {
             wave = newWave
-            waveLabel.text = "WAVE \\(wave)"
+            waveLabel.text = "WAVE \(wave)"
             
             // Spawn mothership boss
             if wave % bossSpawnWave == 0 && !mothershipActive {
@@ -365,7 +365,7 @@ class GameScene3D: SKScene, SKPhysicsContactDelegate {
         // Simple sound playback
         // Note: Add sound files to project for this to work
         /*
-        run(SKAction.playSoundFileNamed("\\(soundName).wav", waitForCompletion: false))
+        run(SKAction.playSoundFileNamed("\(soundName).wav", waitForCompletion: false))
         */
     }
     
@@ -552,17 +552,16 @@ class GameScene3D: SKScene, SKPhysicsContactDelegate {
     // MARK: - UI Updates
     
     private func updateUI() {
-        scoreLabel.text = "SCORE: \\(score)"
-        waveLabel.text = "WAVE \\(wave)"
+        scoreLabel.text = "SCORE: \(score)"
+        waveLabel.text = "WAVE \(wave)"
     }
     
     private func updateLivesDisplay() {
-        let hearts = String(repeating: "♦", count: lives)
-        livesLabel.text = "LIVES: \\(hearts)"
+        livesLabel.text = "LIVES: \(String(repeating: "♦", count: lives))"
     }
     
     private func showComboText(_ points: Int, at position: CGPoint) {
-        let comboText = SKLabelNode(text: "+\\(points)")
+        let comboText = SKLabelNode(text: "+\(points)")
         comboText.fontName = "Helvetica-Bold"
         comboText.fontSize = 16
         comboText.fontColor = .yellow
@@ -580,7 +579,7 @@ class GameScene3D: SKScene, SKPhysicsContactDelegate {
         
         // Update combo label
         if combo > 1 {
-            comboLabel.text = "COMBO x\\(combo)"
+            comboLabel.text = "COMBO x\(combo)"
             comboLabel.alpha = 1.0
             comboLabel.run(SKAction.sequence([
                 SKAction.wait(forDuration: 2.0),

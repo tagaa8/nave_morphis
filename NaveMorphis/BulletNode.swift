@@ -14,17 +14,15 @@ class BulletNode: SKSpriteNode {
     init(type: BulletType) {
         self.bulletType = type
         
-        // Create bullet texture based on type
-        let texture: SKTexture
+        // Create bullet texture programmatically
+        let texture = BulletNode.createBulletTexture()
         let color: UIColor
-        let size = CGSize(width: 8, height: 16)
+        let size = CGSize(width: 6, height: 12)
         
         switch type {
         case .player:
-            texture = SKTexture(imageNamed: "spark") // Using spark as bullet texture
             color = .cyan
         case .enemy:
-            texture = SKTexture(imageNamed: "spark")
             color = .red
         }
         
@@ -75,7 +73,7 @@ class BulletNode: SKSpriteNode {
         
         // Add trail particles
         let trail = SKEmitterNode()
-        trail.particleTexture = SKTexture(imageNamed: "spark")
+        trail.particleTexture = BulletNode.createBulletTexture()
         trail.particleLifetime = 0.2
         trail.particleBirthRate = 50
         trail.particlePositionRange = CGVector(dx: 2, dy: 2)
@@ -96,6 +94,16 @@ class BulletNode: SKSpriteNode {
         trail.position = CGPoint(x: 0, y: -size.height/2)
         trail.zPosition = -2
         addChild(trail)
+    }
+    
+    static func createBulletTexture() -> SKTexture {
+        let size = CGSize(width: 6, height: 12)
+        let renderer = UIGraphicsImageRenderer(size: size)
+        let image = renderer.image { context in
+            context.cgContext.setFillColor(UIColor.white.cgColor)
+            context.cgContext.fill(CGRect(origin: .zero, size: size))
+        }
+        return SKTexture(image: image)
     }
     
     func update() {

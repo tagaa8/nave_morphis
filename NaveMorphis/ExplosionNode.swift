@@ -36,7 +36,7 @@ class ExplosionNode: SKNode {
     private func createExplosion() {
         // Main explosion particles
         let mainExplosion = SKEmitterNode()
-        mainExplosion.particleTexture = SKTexture(imageNamed: "spark")
+        mainExplosion.particleTexture = createExplosionTexture()
         
         switch explosionType {
         case .enemy:
@@ -169,5 +169,15 @@ class ExplosionNode: SKNode {
         if duration >= maxDuration {
             isFinished = true
         }
+    }
+    
+    private func createExplosionTexture() -> SKTexture {
+        let size = CGSize(width: 8, height: 8)
+        let renderer = UIGraphicsImageRenderer(size: size)
+        let image = renderer.image { context in
+            context.cgContext.setFillColor(UIColor.white.cgColor)
+            context.cgContext.fillEllipse(in: CGRect(origin: .zero, size: size))
+        }
+        return SKTexture(image: image)
     }
 }
