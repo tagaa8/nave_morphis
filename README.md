@@ -2,6 +2,16 @@
 
 Un juego de combate espacial retro-neón futurista para iOS construido con SpriteKit.
 
+## 🚀 Inicio Rápido
+
+```bash
+git clone git@github.com:tagaa8/nave_morphis.git
+cd nave_morphis
+open NaveMorphis.xcodeproj
+```
+
+**¡Listo!** Presiona ▶️ en Xcode para compilar y jugar.
+
 ## 🚀 Características Principales
 
 ### Gameplay Core
@@ -41,50 +51,28 @@ Un juego de combate espacial retro-neón futurista para iOS construido con Sprit
 
 ## 🛠️ Instalación y Configuración
 
-### Método 1: Crear Proyecto Nuevo (Recomendado)
+### ¡Súper Simple! Solo Clona y Abre
 
-1. **Crear proyecto en Xcode**:
-   - File → New → Project
-   - iOS → Game
-   - Product Name: `NaveMorphis`
-   - Bundle ID: `com.tagaa8.NaveMorphis`  
-   - Language: Swift
-   - Game Technology: **SpriteKit**
-   - Deployment Target: **iOS 17.0**
-
-2. **Configurar orientación**:
-   - Seleccionar target del proyecto
-   - Deployment Info → Device Orientation
-   - Desmarcar Portrait, dejar solo Landscape Left y Right
-
-3. **Copiar archivos del repositorio**:
-   ```bash
-   git clone git@github.com:tagaa8/nave_morphis.git
-   cd nave_morphis
-   ```
-
-4. **Reemplazar archivos en Xcode**:
-   - `AppDelegate.swift` → Copiar desde el repositorio
-   - `GameViewController.swift` → Reemplazar con el del repo
-   - Crear nuevos archivos Swift y copiar el contenido:
-     - `MainMenuScene.swift`
-     - `GameScene.swift` 
-     - `GameOverScene.swift`
-
-5. **Assets** (opcional):
-   - Copiar carpeta completa `Assets.xcassets` del repo
-   - O usar los assets por defecto de SpriteKit
-
-### Método 2: Importar Proyecto Completo
-
-Si prefieres importar todo el proyecto:
 ```bash
 git clone git@github.com:tagaa8/nave_morphis.git
 cd nave_morphis
 open NaveMorphis.xcodeproj
 ```
 
-**Nota**: Si obtienes errores de proyecto corrupto, usa el Método 1.
+¡Eso es todo! El proyecto está listo para compilar y ejecutar directamente en Xcode.
+
+### Requisitos Previos
+- **Xcode**: 15.0 o superior
+- **iOS**: 17.0 o superior (iPhone 12+ recomendado)
+- **macOS**: Con Xcode instalado
+
+### Si Tienes Problemas
+1. Asegúrate de tener Xcode 15+ instalado
+2. Verifica que tu Mac puede ejecutar iOS Simulator
+3. Si el proyecto no abre, reinstala Xcode Command Line Tools:
+   ```bash
+   xcode-select --install
+   ```
 
 ## 🎮 Controles y Gameplay
 
@@ -113,14 +101,16 @@ open NaveMorphis.xcodeproj
 
 ```
 NaveMorphis/
-├── AppDelegate.swift              # Entrada principal de la app
-├── GameViewController.swift       # Controlador principal, maneja orientación
-├── Sources/
-│   └── Scenes/
-│       ├── MainMenuScene.swift    # Menú principal con estrellas animadas
-│       ├── GameScene.swift        # Lógica principal del juego
-│       └── GameOverScene.swift    # Pantalla final con high score
-└── Assets.xcassets/               # Sprites y recursos gráficos
+├── NaveMorphis/
+│   ├── AppDelegate.swift          # Entrada principal de la app
+│   ├── GameViewController.swift   # Controlador principal, maneja orientación
+│   ├── MainMenuScene.swift        # Menú principal con estrellas animadas
+│   ├── GameScene.swift            # Lógica principal del juego
+│   ├── GameOverScene.swift        # Pantalla final con high score
+│   ├── Assets.xcassets/           # Sprites y recursos gráficos
+│   ├── Base.lproj/                # Storyboards de la interfaz
+│   └── Info.plist                 # Configuración de la app
+└── NaveMorphis.xcodeproj/         # Archivo de proyecto Xcode
 ```
 
 ### Clases Principales

@@ -7,53 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A1234561234567812345678 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1234551234567812345678 /* AppDelegate.swift */; };
-		1A1234581234567812345678 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1234571234567812345678 /* GameViewController.swift */; };
-		1A12345A1234567812345678 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1234591234567812345678 /* LaunchScreen.storyboard */; };
-		1A12345C1234567812345678 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A12345B1234567812345678 /* Assets.xcassets */; };
-		1A12345E1234567812345678 /* GameConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A12345D1234567812345678 /* GameConfig.swift */; };
-		1A1234601234567812345678 /* Physics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A12345F1234567812345678 /* Physics.swift */; };
-		1A1234621234567812345678 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1234611234567812345678 /* MainMenuScene.swift */; };
-		1A1234641234567812345678 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1234631234567812345678 /* GameScene.swift */; };
-		1A1234661234567812345678 /* PauseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1234651234567812345678 /* PauseScene.swift */; };
-		1A1234681234567812345678 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1234671234567812345678 /* GameOverScene.swift */; };
-		1A12346A1234567812345678 /* PlayerShipNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1234691234567812345678 /* PlayerShipNode.swift */; };
-		1A12346C1234567812345678 /* EnemyShipNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A12346B1234567812345678 /* EnemyShipNode.swift */; };
-		1A12346E1234567812345678 /* MothershipNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A12346D1234567812345678 /* MothershipNode.swift */; };
-		1A1234701234567812345678 /* LaserNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A12346F1234567812345678 /* LaserNode.swift */; };
-		1A1234721234567812345678 /* PowerUpNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1234711234567812345678 /* PowerUpNode.swift */; };
-		1A1234741234567812345678 /* HUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1234731234567812345678 /* HUDView.swift */; };
-		1A1234761234567812345678 /* ThumbstickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1234751234567812345678 /* ThumbstickView.swift */; };
-		1A1234781234567812345678 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1234771234567812345678 /* SoundManager.swift */; };
-		1A12347A1234567812345678 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1234791234567812345678 /* HapticManager.swift */; };
+		1A1A1A111234567812345678 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A101234567812345678 /* AppDelegate.swift */; };
+		1A1A1A131234567812345678 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1A1A1A121234567812345678 /* GameScene.sks */; };
+		1A1A1A151234567812345678 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1A1A1A141234567812345678 /* Actions.sks */; };
+		1A1A1A171234567812345678 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A161234567812345678 /* GameScene.swift */; };
+		1A1A1A191234567812345678 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A181234567812345678 /* GameViewController.swift */; };
+		1A1A1A1C1234567812345678 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1A1234567812345678 /* Main.storyboard */; };
+		1A1A1A1E1234567812345678 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1D1234567812345678 /* Assets.xcassets */; };
+		1A1A1A211234567812345678 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1A1A1F1234567812345678 /* LaunchScreen.storyboard */; };
+		1A1A1A291234567812345678 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A281234567812345678 /* MainMenuScene.swift */; };
+		1A1A1A2B1234567812345678 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A1A2A1234567812345678 /* GameOverScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1A1234521234567812345678 /* NaveMorphis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaveMorphis.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A1234551234567812345678 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1A1234571234567812345678 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		1A1234591234567812345678 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		1A12345B1234567812345678 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1A12345D1234567812345678 /* GameConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameConfig.swift; sourceTree = "<group>"; };
-		1A12345F1234567812345678 /* Physics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Physics.swift; sourceTree = "<group>"; };
-		1A1234611234567812345678 /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
-		1A1234631234567812345678 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		1A1234651234567812345678 /* PauseScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseScene.swift; sourceTree = "<group>"; };
-		1A1234671234567812345678 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
-		1A1234691234567812345678 /* PlayerShipNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerShipNode.swift; sourceTree = "<group>"; };
-		1A12346B1234567812345678 /* EnemyShipNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyShipNode.swift; sourceTree = "<group>"; };
-		1A12346D1234567812345678 /* MothershipNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MothershipNode.swift; sourceTree = "<group>"; };
-		1A12346F1234567812345678 /* LaserNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaserNode.swift; sourceTree = "<group>"; };
-		1A1234711234567812345678 /* PowerUpNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerUpNode.swift; sourceTree = "<group>"; };
-		1A1234731234567812345678 /* HUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDView.swift; sourceTree = "<group>"; };
-		1A1234751234567812345678 /* ThumbstickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbstickView.swift; sourceTree = "<group>"; };
-		1A1234771234567812345678 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
-		1A1234791234567812345678 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
-		1A12347B1234567812345678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A1A1A0D1234567812345678 /* NaveMorphis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaveMorphis.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A1A1A101234567812345678 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1A1A1A121234567812345678 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		1A1A1A141234567812345678 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		1A1A1A161234567812345678 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		1A1A1A181234567812345678 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		1A1A1A1B1234567812345678 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1A1A1A1D1234567812345678 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1A1A1A201234567812345678 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1A1A1A281234567812345678 /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
+		1A1A1A2A1234567812345678 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1A12344F1234567812345678 /* Frameworks */ = {
+		1A1A1A0A1234567812345678 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -63,115 +44,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1A1234491234567812345678 = {
+		1A1A1A041234567812345678 = {
 			isa = PBXGroup;
 			children = (
-				1A1234541234567812345678 /* NaveMorphis */,
-				1A1234531234567812345678 /* Products */,
+				1A1A1A0F1234567812345678 /* NaveMorphis */,
+				1A1A1A0E1234567812345678 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		1A1234531234567812345678 /* Products */ = {
+		1A1A1A0E1234567812345678 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1A1234521234567812345678 /* NaveMorphis.app */,
+				1A1A1A0D1234567812345678 /* NaveMorphis.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1A1234541234567812345678 /* NaveMorphis */ = {
+		1A1A1A0F1234567812345678 /* NaveMorphis */ = {
 			isa = PBXGroup;
 			children = (
-				1A1234551234567812345678 /* AppDelegate.swift */,
-				1A1234571234567812345678 /* GameViewController.swift */,
-				1A12347C1234567812345678 /* Sources */,
-				1A12345B1234567812345678 /* Assets.xcassets */,
-				1A1234591234567812345678 /* LaunchScreen.storyboard */,
-				1A12347B1234567812345678 /* Info.plist */,
+				1A1A1A101234567812345678 /* AppDelegate.swift */,
+				1A1A1A121234567812345678 /* GameScene.sks */,
+				1A1A1A141234567812345678 /* Actions.sks */,
+				1A1A1A161234567812345678 /* GameScene.swift */,
+				1A1A1A281234567812345678 /* MainMenuScene.swift */,
+				1A1A1A2A1234567812345678 /* GameOverScene.swift */,
+				1A1A1A181234567812345678 /* GameViewController.swift */,
+				1A1A1A1A1234567812345678 /* Main.storyboard */,
+				1A1A1A1D1234567812345678 /* Assets.xcassets */,
+				1A1A1A1F1234567812345678 /* LaunchScreen.storyboard */,
 			);
 			path = NaveMorphis;
-			sourceTree = "<group>";
-		};
-		1A12347C1234567812345678 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				1A12347D1234567812345678 /* GameCore */,
-				1A12347E1234567812345678 /* Scenes */,
-				1A12347F1234567812345678 /* Entities */,
-				1A1234801234567812345678 /* UI */,
-				1A1234811234567812345678 /* Audio */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		1A12347D1234567812345678 /* GameCore */ = {
-			isa = PBXGroup;
-			children = (
-				1A12345D1234567812345678 /* GameConfig.swift */,
-				1A12345F1234567812345678 /* Physics.swift */,
-				1A1234791234567812345678 /* HapticManager.swift */,
-			);
-			path = GameCore;
-			sourceTree = "<group>";
-		};
-		1A12347E1234567812345678 /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				1A1234611234567812345678 /* MainMenuScene.swift */,
-				1A1234631234567812345678 /* GameScene.swift */,
-				1A1234651234567812345678 /* PauseScene.swift */,
-				1A1234671234567812345678 /* GameOverScene.swift */,
-			);
-			path = Scenes;
-			sourceTree = "<group>";
-		};
-		1A12347F1234567812345678 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				1A1234691234567812345678 /* PlayerShipNode.swift */,
-				1A12346B1234567812345678 /* EnemyShipNode.swift */,
-				1A12346D1234567812345678 /* MothershipNode.swift */,
-				1A12346F1234567812345678 /* LaserNode.swift */,
-				1A1234711234567812345678 /* PowerUpNode.swift */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
-		1A1234801234567812345678 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				1A1234731234567812345678 /* HUDView.swift */,
-				1A1234821234567812345678 /* Controls */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		1A1234811234567812345678 /* Audio */ = {
-			isa = PBXGroup;
-			children = (
-				1A1234771234567812345678 /* SoundManager.swift */,
-			);
-			path = Audio;
-			sourceTree = "<group>";
-		};
-		1A1234821234567812345678 /* Controls */ = {
-			isa = PBXGroup;
-			children = (
-				1A1234751234567812345678 /* ThumbstickView.swift */,
-			);
-			path = Controls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1A1234511234567812345678 /* NaveMorphis */ = {
+		1A1A1A0C1234567812345678 /* NaveMorphis */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1A12347E1234567812345678 /* Build configuration list for PBXNativeTarget "NaveMorphis" */;
+			buildConfigurationList = 1A1A1A241234567812345678 /* Build configuration list for PBXNativeTarget "NaveMorphis" */;
 			buildPhases = (
-				1A12344E1234567812345678 /* Sources */,
-				1A12344F1234567812345678 /* Frameworks */,
-				1A1234501234567812345678 /* Resources */,
+				1A1A1A091234567812345678 /* Sources */,
+				1A1A1A0A1234567812345678 /* Frameworks */,
+				1A1A1A0B1234567812345678 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -179,25 +94,25 @@
 			);
 			name = NaveMorphis;
 			productName = NaveMorphis;
-			productReference = 1A1234521234567812345678 /* NaveMorphis.app */;
+			productReference = 1A1A1A0D1234567812345678 /* NaveMorphis.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1A12344A1234567812345678 /* Project object */ = {
+		1A1A1A051234567812345678 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					1A1234511234567812345678 = {
+					1A1A1A0C1234567812345678 = {
 						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
-			buildConfigurationList = 1A12344D1234567812345678 /* Build configuration list for PBXProject "NaveMorphis" */;
+			buildConfigurationList = 1A1A1A081234567812345678 /* Build configuration list for PBXProject "NaveMorphis" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -205,57 +120,67 @@
 				en,
 				Base,
 			);
-			mainGroup = 1A1234491234567812345678;
-			productRefGroup = 1A1234531234567812345678 /* Products */;
+			mainGroup = 1A1A1A041234567812345678;
+			productRefGroup = 1A1A1A0E1234567812345678 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1A1234511234567812345678 /* NaveMorphis */,
+				1A1A1A0C1234567812345678 /* NaveMorphis */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1A1234501234567812345678 /* Resources */ = {
+		1A1A1A0B1234567812345678 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A12345A1234567812345678 /* LaunchScreen.storyboard in Resources */,
-				1A12345C1234567812345678 /* Assets.xcassets in Resources */,
+				1A1A1A1C1234567812345678 /* Main.storyboard in Resources */,
+				1A1A1A131234567812345678 /* GameScene.sks in Resources */,
+				1A1A1A1E1234567812345678 /* Assets.xcassets in Resources */,
+				1A1A1A211234567812345678 /* LaunchScreen.storyboard in Resources */,
+				1A1A1A151234567812345678 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1A12344E1234567812345678 /* Sources */ = {
+		1A1A1A091234567812345678 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A1234561234567812345678 /* AppDelegate.swift in Sources */,
-				1A1234581234567812345678 /* GameViewController.swift in Sources */,
-				1A12345E1234567812345678 /* GameConfig.swift in Sources */,
-				1A1234601234567812345678 /* Physics.swift in Sources */,
-				1A1234621234567812345678 /* MainMenuScene.swift in Sources */,
-				1A1234641234567812345678 /* GameScene.swift in Sources */,
-				1A1234661234567812345678 /* PauseScene.swift in Sources */,
-				1A1234681234567812345678 /* GameOverScene.swift in Sources */,
-				1A12346A1234567812345678 /* PlayerShipNode.swift in Sources */,
-				1A12346C1234567812345678 /* EnemyShipNode.swift in Sources */,
-				1A12346E1234567812345678 /* MothershipNode.swift in Sources */,
-				1A1234701234567812345678 /* LaserNode.swift in Sources */,
-				1A1234721234567812345678 /* PowerUpNode.swift in Sources */,
-				1A1234741234567812345678 /* HUDView.swift in Sources */,
-				1A1234761234567812345678 /* ThumbstickView.swift in Sources */,
-				1A1234781234567812345678 /* SoundManager.swift in Sources */,
-				1A12347A1234567812345678 /* HapticManager.swift in Sources */,
+				1A1A1A171234567812345678 /* GameScene.swift in Sources */,
+				1A1A1A191234567812345678 /* GameViewController.swift in Sources */,
+				1A1A1A291234567812345678 /* MainMenuScene.swift in Sources */,
+				1A1A1A2B1234567812345678 /* GameOverScene.swift in Sources */,
+				1A1A1A111234567812345678 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		1A1A1A1A1234567812345678 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A1A1A1B1234567812345678 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1A1A1A1F1234567812345678 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A1A1A201234567812345678 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		1A12347C1234567812345678 /* Debug */ = {
+		1A1A1A221234567812345678 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -318,7 +243,7 @@
 			};
 			name = Debug;
 		};
-		1A12347D1234567812345678 /* Release */ = {
+		1A1A1A231234567812345678 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -374,7 +299,7 @@
 			};
 			name = Release;
 		};
-		1A12347F1234567812345678 /* Debug */ = {
+		1A1A1A251234567812345678 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -383,10 +308,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NaveMorphis/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -403,7 +327,7 @@
 			};
 			name = Debug;
 		};
-		1A1234801234567812345678 /* Release */ = {
+		1A1A1A261234567812345678 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -412,10 +336,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NaveMorphis/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -435,25 +358,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1A12344D1234567812345678 /* Build configuration list for PBXProject "NaveMorphis" */ = {
+		1A1A1A081234567812345678 /* Build configuration list for PBXProject "NaveMorphis" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1A12347C1234567812345678 /* Debug */,
-				1A12347D1234567812345678 /* Release */,
+				1A1A1A221234567812345678 /* Debug */,
+				1A1A1A231234567812345678 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1A12347E1234567812345678 /* Build configuration list for PBXNativeTarget "NaveMorphis" */ = {
+		1A1A1A241234567812345678 /* Build configuration list for PBXNativeTarget "NaveMorphis" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1A12347F1234567812345678 /* Debug */,
-				1A1234801234567812345678 /* Release */,
+				1A1A1A251234567812345678 /* Debug */,
+				1A1A1A261234567812345678 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 1A12344A1234567812345678 /* Project object */;
+	rootObject = 1A1A1A051234567812345678 /* Project object */;
 }
