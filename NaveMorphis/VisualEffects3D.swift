@@ -671,8 +671,21 @@ class PowerUp3D: SKSpriteNode {
         self.creationTime = CACurrentMediaTime()
         self.floatPhase = CGFloat.random(in: 0...(2 * CGFloat.pi))
         
+        // Determine color before super.init
+        let powerColor: UIColor
+        switch powerType {
+        case .extraLife:
+            powerColor = .green
+        case .rapidFire:
+            powerColor = .yellow
+        case .shield:
+            powerColor = .cyan
+        case .tripleShot:
+            powerColor = .magenta
+        }
+        
         let texture = SKTexture(imageNamed: "spark")
-        super.init(texture: texture, color: getPowerUpColor(), size: CGSize(width: 20, height: 20))
+        super.init(texture: texture, color: powerColor, size: CGSize(width: 20, height: 20))
         
         self.position = position
         colorBlendFactor = 0.8
