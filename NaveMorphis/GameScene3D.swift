@@ -1,6 +1,5 @@
 import SpriteKit
 import GameplayKit
-import AVFoundation
 
 class GameScene3D: SKScene, SKPhysicsContactDelegate {
     
@@ -47,8 +46,6 @@ class GameScene3D: SKScene, SKPhysicsContactDelegate {
     private var instructionsLabel: SKLabelNode!
     
     // MARK: - Audio System
-    private var audioEngine: AVAudioEngine!
-    private var spatialAudioNode: AVAudio3DMixerNode!
     private var backgroundMusic: SKAudioNode?
     
     // MARK: - Physics Categories
@@ -59,7 +56,7 @@ class GameScene3D: SKScene, SKPhysicsContactDelegate {
     private let mothershipCategory: UInt32 = 0x1 << 4
     private let debrisCategory: UInt32 = 0x1 << 5
     
-    enum GameState {
+    public enum GameState {
         case menu, playing, paused, gameOver, bossIntro
     }
     
@@ -121,24 +118,15 @@ class GameScene3D: SKScene, SKPhysicsContactDelegate {
     }
     
     private func setupAudioSystem() {
-        audioEngine = AVAudioEngine()
-        spatialAudioNode = AVAudio3DMixerNode()
-        
-        audioEngine.attach(spatialAudioNode)
-        audioEngine.connect(spatialAudioNode, to: audioEngine.mainMixerNode, format: nil)
-        
-        do {
-            try audioEngine.start()
-        } catch {
-            print("Audio engine failed to start: \\(error)")
-        }
-        
-        // Background music
+        // Simple background music setup
+        // Note: Add "space_ambient.m4a" to project for background music
+        /*
         if let musicPath = Bundle.main.path(forResource: "space_ambient", ofType: "m4a") {
             backgroundMusic = SKAudioNode(fileNamed: "space_ambient.m4a")
             backgroundMusic?.autoplayLooped = true
             addChild(backgroundMusic!)
         }
+        */
     }
     
     private func setupPlayer() {
@@ -346,7 +334,7 @@ class GameScene3D: SKScene, SKPhysicsContactDelegate {
         playSpatialSound("laser_fire", at: playerShip.position)
     }
     
-    private func createExplosion(at position: CGPoint, type: ExplosionType) {
+    private func createExplosion(at position: CGPoint, type: ExplosionEffect3D.ExplosionType) {
         let explosion = ExplosionEffect3D(at: position, type: type)
         explosions.insert(explosion)
         addChild(explosion)
@@ -358,7 +346,8 @@ class GameScene3D: SKScene, SKPhysicsContactDelegate {
             createScreenShake(intensity: 5)
         }
         
-        playSpatialSound("explosion_\\(type.rawValue)", at: position)
+        // Play simple sound effect
+        run(SKAction.playSoundFileNamed("explosion.wav", waitForCompletion: false))
     }
     
     private func createScreenShake(intensity: CGFloat) {
@@ -373,15 +362,11 @@ class GameScene3D: SKScene, SKPhysicsContactDelegate {
     // MARK: - Audio System
     
     private func playSpatialSound(_ soundName: String, at position: CGPoint) {
-        // Create positional audio effect
-        let audioNode = SKAudioNode(fileNamed: "\\(soundName).wav")
-        audioNode.position = position
-        addChild(audioNode)
-        
-        audioNode.run(SKAction.sequence([
-            SKAction.wait(forDuration: 2.0),
-            SKAction.removeFromParent()
-        ]))
+        // Simple sound playback
+        // Note: Add sound files to project for this to work
+        /*
+        run(SKAction.playSoundFileNamed("\\(soundName).wav", waitForCompletion: false))
+        */
     }
     
     // MARK: - Touch Handling
@@ -472,7 +457,7 @@ class GameScene3D: SKScene, SKPhysicsContactDelegate {
             enemies.remove(enemyShip)
             enemyShip.removeFromParent()
             
-            createExplosion(at: enemyShip.position, type: .enemy)
+            createExplosion(at: enemyShip.position, type: ExplosionEffect3D.ExplosionType.enemy)
             
             // Damage player
             lives -= 1
@@ -497,7 +482,7 @@ class GameScene3D: SKScene, SKPhysicsContactDelegate {
             enemies.remove(enemyShip)
             enemyShip.removeFromParent()
             
-            createExplosion(at: enemyShip.position, type: .enemy)
+            createExplosion(at: enemyShip.position, type: ExplosionEffect3D.ExplosionType.enemy)
             
             // Score and combo
             combo += 1
@@ -609,7 +594,7 @@ class GameScene3D: SKScene, SKPhysicsContactDelegate {
     private func destroyMothership() {
         guard let mothership = mothership else { return }
         
-        createExplosion(at: mothership.position, type: .mothership)
+        createExplosion(at: mothership.position, type: ExplosionEffect3D.ExplosionType.mothership)
         
         // Massive score bonus
         score += 5000
@@ -679,12 +664,6 @@ class GameScene3D: SKScene, SKPhysicsContactDelegate {
 }
 
 // MARK: - Supporting Enums
-
-enum ExplosionType: String {
-    case small = "small"
-    case enemy = "enemy"
-    case mothership = "mothership"
-}
 
 enum PowerUpType: CaseIterable {
     case extraLife, rapidFire, shield, tripleShot
