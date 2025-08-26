@@ -33,14 +33,10 @@
 		E51A2B3E1F2A34D800123456 /* ExplosionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B3D1F2A34D800123456 /* ExplosionNode.swift */; };
 		E51A2B401F2A34D800123456 /* PowerUpNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B3F1F2A34D800123456 /* PowerUpNode.swift */; };
 		E51A2B421F2A34D800123456 /* GameOverArena.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B411F2A34D800123456 /* GameOverArena.swift */; };
-		E51A2B441F2A34D800123456 /* Game3DViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B431F2A34D800123456 /* Game3DViewController.swift */; };
-		E51A2B461F2A34D800123456 /* Game3DScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B451F2A34D800123456 /* Game3DScene.swift */; };
-		E51A2B481F2A34D800123456 /* Game3DScene+Physics.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B471F2A34D800123456 /* Game3DScene+Physics.swift */; };
-		E51A2B4A1F2A34D800123456 /* VirtualJoystick3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B491F2A34D800123456 /* VirtualJoystick3D.swift */; };
-		E51A2B4C1F2A34D800123456 /* uss_defiant.obj in Resources */ = {isa = PBXBuildFile; fileRef = E51A2B4B1F2A34D800123456 /* uss_defiant.obj */; };
-		E51A2B4E1F2A34D800123456 /* uss_defiant.mtl in Resources */ = {isa = PBXBuildFile; fileRef = E51A2B4D1F2A34D800123456 /* uss_defiant.mtl */; };
-		E51A2B501F2A34D800123456 /* ufo_enemy.obj in Resources */ = {isa = PBXBuildFile; fileRef = E51A2B4F1F2A34D800123456 /* ufo_enemy.obj */; };
-		E51A2B521F2A34D800123456 /* ds9_station.3ds in Resources */ = {isa = PBXBuildFile; fileRef = E51A2B511F2A34D800123456 /* ds9_station.3ds */; };
+		E51A2B5A1F2A34D800123456 /* Game3DViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B5B1F2A34D800123456 /* Game3DViewController.swift */; };
+		E51A2B5C1F2A34D800123456 /* Game3DScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B5D1F2A34D800123456 /* Game3DScene.swift */; };
+		E51A2B5E1F2A34D800123456 /* Game3DScene+Physics.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B5F1F2A34D800123456 /* Game3DScene+Physics.swift */; };
+		E51A2B601F2A34D800123456 /* VirtualJoystick3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A2B611F2A34D800123456 /* VirtualJoystick3D.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,14 +68,10 @@
 		E51A2B3D1F2A34D800123456 /* ExplosionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplosionNode.swift; sourceTree = "<group>"; };
 		E51A2B3F1F2A34D800123456 /* PowerUpNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerUpNode.swift; sourceTree = "<group>"; };
 		E51A2B411F2A34D800123456 /* GameOverArena.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverArena.swift; sourceTree = "<group>"; };
-		E51A2B431F2A34D800123456 /* Game3DViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game3DViewController.swift; sourceTree = "<group>"; };
-		E51A2B451F2A34D800123456 /* Game3DScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game3DScene.swift; sourceTree = "<group>"; };
-		E51A2B471F2A34D800123456 /* Game3DScene+Physics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game3DScene+Physics.swift"; sourceTree = "<group>"; };
-		E51A2B491F2A34D800123456 /* VirtualJoystick3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualJoystick3D.swift; sourceTree = "<group>"; };
-		E51A2B4B1F2A34D800123456 /* uss_defiant.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = uss_defiant.obj; sourceTree = "<group>"; };
-		E51A2B4D1F2A34D800123456 /* uss_defiant.mtl */ = {isa = PBXFileReference; lastKnownFileType = text; path = uss_defiant.mtl; sourceTree = "<group>"; };
-		E51A2B4F1F2A34D800123456 /* ufo_enemy.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = ufo_enemy.obj; sourceTree = "<group>"; };
-		E51A2B511F2A34D800123456 /* ds9_station.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = ds9_station.3ds; sourceTree = "<group>"; };
+		E51A2B5B1F2A34D800123456 /* Game3DViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game3DViewController.swift; sourceTree = "<group>"; };
+		E51A2B5D1F2A34D800123456 /* Game3DScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game3DScene.swift; sourceTree = "<group>"; };
+		E51A2B5F1F2A34D800123456 /* Game3DScene+Physics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game3DScene+Physics.swift"; sourceTree = "<group>"; };
+		E51A2B611F2A34D800123456 /* VirtualJoystick3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualJoystick3D.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +110,7 @@
 				E51A2B431F2A34D800123456 /* Game Arena */,
 				E51A2B441F2A34D800123456 /* Legacy 3D Game */,
 				E51A2B451F2A34D800123456 /* Resources */,
-				E51A2B461F2A34D800123456 /* Storyboards */,
+				E51A2B471F2A34D800123456 /* Storyboards */,
 				E51A2B131F2A34D800123456 /* Info.plist */,
 			);
 			path = NaveMorphis;
@@ -138,21 +130,6 @@
 				E51A2B411F2A34D800123456 /* GameOverArena.swift */,
 			);
 			name = "Game Arena";
-			sourceTree = "<group>";
-		};
-		E51A2B541F2A34D800123456 /* 3D Game */ = {
-			isa = PBXGroup;
-			children = (
-				E51A2B431F2A34D800123456 /* Game3DViewController.swift */,
-				E51A2B451F2A34D800123456 /* Game3DScene.swift */,
-				E51A2B471F2A34D800123456 /* Game3DScene+Physics.swift */,
-				E51A2B491F2A34D800123456 /* VirtualJoystick3D.swift */,
-				E51A2B4B1F2A34D800123456 /* uss_defiant.obj */,
-				E51A2B4D1F2A34D800123456 /* uss_defiant.mtl */,
-				E51A2B4F1F2A34D800123456 /* ufo_enemy.obj */,
-				E51A2B511F2A34D800123456 /* ds9_station.3ds */,
-			);
-			name = "3D Game";
 			sourceTree = "<group>";
 		};
 		E51A2B441F2A34D800123456 /* Legacy 3D Game */ = {
@@ -182,13 +159,24 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		E51A2B461F2A34D800123456 /* Storyboards */ = {
+		E51A2B471F2A34D800123456 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				E51A2B0B1F2A34D800123456 /* Main.storyboard */,
 				E51A2B101F2A34D800123456 /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		E51A2B541F2A34D800123456 /* 3D Game */ = {
+			isa = PBXGroup;
+			children = (
+				E51A2B5B1F2A34D800123456 /* Game3DViewController.swift */,
+				E51A2B5D1F2A34D800123456 /* Game3DScene.swift */,
+				E51A2B5F1F2A34D800123456 /* Game3DScene+Physics.swift */,
+				E51A2B611F2A34D800123456 /* VirtualJoystick3D.swift */,
+			);
+			name = "3D Game";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,10 +242,6 @@
 				E51A2B061F2A34D800123456 /* Actions.sks in Resources */,
 				E51A2B0D1F2A34D800123456 /* Main.storyboard in Resources */,
 				E51A2B121F2A34D800123456 /* LaunchScreen.storyboard in Resources */,
-				E51A2B4C1F2A34D800123456 /* uss_defiant.obj in Resources */,
-				E51A2B4E1F2A34D800123456 /* uss_defiant.mtl in Resources */,
-				E51A2B501F2A34D800123456 /* ufo_enemy.obj in Resources */,
-				E51A2B521F2A34D800123456 /* ds9_station.3ds in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,10 +273,10 @@
 				E51A2B3E1F2A34D800123456 /* ExplosionNode.swift in Sources */,
 				E51A2B401F2A34D800123456 /* PowerUpNode.swift in Sources */,
 				E51A2B421F2A34D800123456 /* GameOverArena.swift in Sources */,
-				E51A2B441F2A34D800123456 /* Game3DViewController.swift in Sources */,
-				E51A2B461F2A34D800123456 /* Game3DScene.swift in Sources */,
-				E51A2B481F2A34D800123456 /* Game3DScene+Physics.swift in Sources */,
-				E51A2B4A1F2A34D800123456 /* VirtualJoystick3D.swift in Sources */,
+				E51A2B5A1F2A34D800123456 /* Game3DViewController.swift in Sources */,
+				E51A2B5C1F2A34D800123456 /* Game3DScene.swift in Sources */,
+				E51A2B5E1F2A34D800123456 /* Game3DScene+Physics.swift in Sources */,
+				E51A2B601F2A34D800123456 /* VirtualJoystick3D.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,20 +437,16 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.navemorphis.game;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tagaa8.NaveMorphis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -486,20 +466,16 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.navemorphis.game;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tagaa8.NaveMorphis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
